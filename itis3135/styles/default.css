@@ -1,9 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+header {
+    background-color: #ddd8c4;
+    color: black;
+}
+
+
+
+main {
+    background-color: #9CA3DB;
+    color: black;
+}
+
 footer {
-    background-color: #03312E;
+    background-color: #32533D;
     color: white;
 }
 
-footer_links {
+.footer_link_style {
     color: white;
 }
 
