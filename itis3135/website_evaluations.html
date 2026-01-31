@@ -8,12 +8,7 @@
     <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Couse Home Page</a>
-        </nav>
-        <h1>Website Evaluation</h1>
-    </header>
+    <div data-include="components/header.html" data-replace="%title%: Website Evaluation"></div>
     <main>
         <h2>Evaluator Page</h2>
         <section>
@@ -35,14 +30,7 @@
             </ul>
         </section>
     </main>
-    <footer>
-        <nav>
-            <a class="footer_link_style" href ="itis3135/">ITSC3135</a> |
-            <a class="footer_link_style" href="https://github.com/Justin957198">Github</a> |
-            <a class="footer_link_style" href="https://webpages.charlotte.edu/jjohn646/">UNCC page</a> |
-            <a class="footer_link_style" href="https://justin957198.github.io/">Github.io</a> | 
-            <a class="footer_link_style" href="https://www.linkedin.com/in/justin-johnson-95a443324/">Linkedin</a>
-        </nav>
-    </footer>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
