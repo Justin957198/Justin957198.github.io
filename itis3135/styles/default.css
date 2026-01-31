@@ -1,14 +1,13 @@
 
 * {
   margin: 0;
-  width: 900;
   box-sizing: border-box;
   line-height: 1.5;
 }
 
 header {
     background-color: #ddd8c4;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Merriweather Sans", sans-serif;
     text-align: center;
     color: black;
 }
@@ -33,7 +32,11 @@ h2 {
 
 footer {
     background-color: #32533D;
+    font-family: "Times New Roman", sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
     color: white;
+    height: 100vw;
 }
 
 .footer-link-style {
