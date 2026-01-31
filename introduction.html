@@ -10,14 +10,21 @@
     <link rel="stylesheet" href="itis3135/styles/default.css">
 </head>
 <body>
-    <div data-include="itis3135/components/header.html" data-replace="%title%:Justin L. Johnson"></div>
+    <header>
+        <nav>
+            <a href="index.html">Itis Landing Page</a> | 
+            <a href="itis3135/index.html">Itis Home Page</a>
+
+        </nav>
+        <h1>Justin L. Johnson</h1>
+    </header>
     <main>
-        <h2>Introduction Page .</h2>
+        <h2 style="text-align: center;">Introduction Page</h2>
         <figure>
             <img src="itis3135/images/Justin_plane.jpg" width="300" height="300" alt="Me on my first plane ride.">
             <figcaption>Me on a plane</figcaption>
         </figure>
-        <a href="itis3135/">Click here to go to my front page</a>
+        <p><a href="itis3135/">Itis home page</a></p>
         <p>I am a junior attending here at UNCC. I'm a computer science major with a concentration in Web/App development. I’m excited to learn how to put a face on the backends and servers I'm in progress of making.</p>
         <ul>
             <li><h2>Academic Background: </h2>
@@ -41,10 +48,18 @@
         </ul>
         <blockquote cite="https://www.brainyquote.com/quotes/john_wooden_105700">
             <p><q>Dont let what you cannot do interfere with what you can do. </q><br>
--John Wooden</p>
+            -John Wooden</p>
         </blockquote>
     </main>
-    <div data-include="itis3135/components/footer.html"></div>
-    <script src="itis3135/scripts/HTMLInclude.min.js"></script>
+    <footer>
+        <nav>
+            <h2>Personal Links</h2>
+            <a class="footer-link-style" href ="../index.html">ITSC3135</a> |
+            <a class="footer-link-style" href="https://github.com/Justin957198">Github</a> |
+            <a class="footer-link-style" href="https://webpages.charlotte.edu/jjohn646/">UNCC page</a> |
+            <a class="footer-link-style" href="https://justin957198.github.io/">Github.io</a> | 
+            <a class="footer-link-style" href="https://www.linkedin.com/in/justin-johnson-95a443324/">Linkedin</a>
+        </nav>
+    </footer>
 </body>
 </html>
