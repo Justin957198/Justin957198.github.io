@@ -30,6 +30,10 @@ h2 {
     font-family: "Roboto", sans-serif;
 }
 
+p {
+    text-indent: 40px;
+}
+
 footer {
     background-color: #32533D;
     font-family: "Times New Roman", sans-serif;
