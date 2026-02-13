@@ -60,7 +60,7 @@ tr[class="in-progress"] span[class="status"] {
 span[class="status"] span[class^="rate"] {
     height: 20px;
     width: 5px;
-    padding: 5px;
+    
 }
 
 span[class^="rate"] > span {
