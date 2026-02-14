@@ -27,18 +27,6 @@ span {
     display: inline-block;
 }
 
-.one {
-
-}
-
-.two {
-
-}
-
-.three {
-
-}
-
 tr[class="to-read"] span[class="status"] {
     border: 1px solid blue;
     border-radius: 15%;
