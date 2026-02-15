@@ -1,6 +1,7 @@
 body {
     display: grid;
-    grid-template-columns: 30vh 70vh;
+    
+    grid-template-columns: 30fr 70fr;
     grid-template-rows: 33vh 44vh 22vh;
     justify-content: center;
     gap: 10px;
@@ -21,11 +22,17 @@ figure {
 }
 
 h1 {
-
+    font-family: "Georgia", sans-serif;
+    font-size: 30px;
 }
 
 h2 {
     font-family: "Oxanium", sans-serif;
+}
+
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
 }
 
 .main-menu {
