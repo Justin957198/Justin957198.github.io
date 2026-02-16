@@ -1,7 +1,7 @@
 body {
     display: grid;
     
-    grid-template-columns: 30vh 70vh;
+    grid-template-columns: 30% 70%;
     grid-template-rows: 33vh 44vh 22vh;
     justify-content: center;
     gap: 10px;
@@ -23,6 +23,7 @@ figure {
 
 h1 {
     font-family: "Georgia", sans-serif;
+    text-align: center;
     font-size: 30px;
 }
 
