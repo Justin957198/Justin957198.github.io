@@ -1,0 +1,16 @@
+#main-doc {
+    display: grid;
+    grid-template-rows: 100vh;
+    grid-template-columns: 20% 80%;
+    justify-content: center;
+}
+
+#navbar {
+  border: 1px solid black;
+  padding: 5px;
+  float: left;
+  width: 40vh;
+  overflow: auto;
+}
+
+
