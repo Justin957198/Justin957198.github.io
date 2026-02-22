@@ -1,0 +1,41 @@
+#header {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 5px;
+  top: 0px;
+  background: linear-gradient(to top, orange, white);
+}
+
+#nav-bar {
+    padding: 20px;
+    justify-content: flex-end;
+}
+
+#product-title {
+    justify-content: flex-start;
+}
+
+#product-image{
+    text-align: center;
+}
+
+#form {
+    text-align: center;
+}
+
+#media {
+    text-align: center;
+}
+
+
+#video {
+  border: 1px solid black;
+  margin: 20px;
+  text-align: center;
+}
+
+footer {
+    text-align: right;
+}
