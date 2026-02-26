@@ -2,6 +2,10 @@ body {
   background-color: darkgrey;
 }
 
+p {
+  font-size: small;
+}
+
 #playing-cards {
   display: flex;
   justify-content: center;
@@ -36,5 +40,6 @@ body {
 .right {
   align-self: flex-end;
   font-size: 30px;
+  padding-right: 5px;
   
 }

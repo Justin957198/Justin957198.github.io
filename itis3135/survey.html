@@ -16,8 +16,35 @@
 <body>
     <div data-include="components/header.html" data-replace="%title%: Survey Page"></div>
     <main>
-        <h2>Survey Project</h2>
-        <p>To be added to soon</p>
+    <p id="description">A survey page for submitting thoughts on the food</p>
+    <form id="survey-form" style="margin-left: 10%; margin-right: 10%;">
+      <label id="name-label">Enter Name:</label>
+      <input required placeholder="e.g., John Doe" id="name" name="name-input" type="text">
+      <label id="email-label"><br>Enter Email:</label>
+      <input required placeholder="example@email.com" id="email" name="email-input" type="email">
+      <label id="number-label"><br>Enter Age (optinal):</label>
+      <input placeholder="e.g., 32" min="16" max="100" id="number" type="number">
+      <label id="dropdown-label"><br>What best describes your feelings<br></label>
+      <select id="dropdown">
+        <option>Happy</option>
+        <option>Sad</option>
+      </select>
+      <label id="recommendation-label"><br>Would you recommend this dinner to a friend<br>Yes</label>
+      <input value="yes" type="radio" name="recommendation-option">
+      <label id="recommendation-option-2">No</label>
+      <input value="no" type="radio" name="recommendation-option">
+      <label id="improvment-label"><br>What can be improved apon?<br></label>
+      <input type="checkbox" value="Food">Food
+      <input type="checkbox" value="Service">Serice
+      <input type="checkbox" value="Decor">Decor
+      <input type="checkbox" value="Entertainment">Entertainment
+      <input type="checkbox" value="Online Store Front">Online Store Front<br>
+      <textarea id="input" rows="4" cols="30">
+
+      </textarea>
+      <br>
+      <button id="submit">Submit</button>
+    </form>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>

@@ -7,16 +7,16 @@ table {
     border: 2px solid black;
 }
 
-.read {
+.available {
     background-image: linear-gradient(to bottom, #83f28f , white)
 }
 
-.to-read {
-    background-image: linear-gradient(to bottom, #ffc067 , white)
+.ordered {
+    background-image: linear-gradient(to bottom, #fffd8d , white)
 }
 
-.in-progress {
-    background-image: linear-gradient(to bottom, #fffd8d , white)
+.sold-out {
+    background-image: linear-gradient(to bottom, #ffc067 , white)
 }
 
 .status {
@@ -27,22 +27,22 @@ span {
     display: inline-block;
 }
 
-tr[class="to-read"] span[class="status"] {
+tr[class="ordered"] span[class="status"] {
     border: 1px solid blue;
     border-radius: 15%;
-    background-image: linear-gradient(45deg, #ffc067 , white);
+    background-image: linear-gradient(45deg, #fffd8d , white);
 }
 
-tr[class="read"] span[class="status"] {
+tr[class="available"] span[class="status"] {
     border: 1px solid blue;
     border-radius: 15%;
     background-image: linear-gradient(45deg, #83f28f , white);
 }
 
-tr[class="in-progress"] span[class="status"] {
+tr[class="sold-out"] span[class="status"] {
     border: 1px solid blue;
     border-radius: 15%;
-    background-image: linear-gradient(45deg, #fffd8d , white);
+    background-image: linear-gradient(45deg, #ffc067 , white);
 }
 
 span[class="status"] span[class^="rate"] {
@@ -52,7 +52,6 @@ span[class="status"] span[class^="rate"] {
 }
 
 span[class^="rate"] > span {
-    border: 1px solid black;
     border-radius: 15%;
     margin: 4px;
     height: 10px;
@@ -61,13 +60,13 @@ span[class^="rate"] > span {
 }
 
 span[class*="one"] span:first-child {
-    background-image: linear-gradient(to top, #90D5FF, white);
+    background-image: linear-gradient(to top, #5bb5ec, white);
 }
 
 span[class*="two"] span:nth-child(1), span[class*="two"] span:nth-child(2) {
-    background-image: linear-gradient(to top, #90D5FF, white);
+    background-image: linear-gradient(to top, #5bb5ec, white);
 }
 
 span[class*="three"] span:nth-child(1), span[class*="three"] span:nth-child(2), span[class*="three"] span:nth-child(3) {
-    background-image: linear-gradient(to top, #90D5FF, white);
+    background-image: linear-gradient(to top, #5bb5ec, white);
 }

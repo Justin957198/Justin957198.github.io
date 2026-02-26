@@ -15,24 +15,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div data-include="components/header.html" data-replace="%title%: Inventory Page"></div>
+    <div data-include="components/header.html" data-replace="%title%: Menu availability Page"></div>
     <main>
         <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Category</th>
-      <th>Status</th>
-      <th>Rate</th>
+      <th>Drink Name</th>
+      <th>Price</th>
+      <th>Temp</th>
+      <th>availability</th>
+      <th>Rating</th>
     </tr>
   </thead>
   <tbody>
-    <tr class="read">
-      <td>The Silent Patient</td>
-      <td>Alex Michaelides</td>
-      <td>Thriller</td>
-      <td><span class="status">Read</span></td>
+    <tr class="available">
+      <td>Latte</td>
+      <td>$7.99</td>
+      <td>Hot: 140 - 155&deg;F</td>
+      <td><span class="status">Available</span></td>
       <td>
         <span class="rate three">
           <span></span><span></span><span></span>
@@ -40,11 +40,11 @@
       </td>
     </tr>
 
-    <tr class="to-read">
-      <td>Atomic Habits</td>
-      <td>James Clear</td>
-      <td>Self-Help</td>
-      <td><span class="status">To Read</span></td>
+    <tr class="ordered">
+      <td>Cappuccino</td>
+      <td>$11.99</td>
+      <td>Hot: 130 - 150&deg;F</td>
+      <td><span class="status">Ordered</span></td>
       <td>
         <span class="rate one">
           <span></span><span></span><span></span>
@@ -52,10 +52,10 @@
       </td>
     </tr>
 
-    <tr class="in-progress">
-      <td>Dune</td>
-      <td>Frank Herbert</td>
-      <td>Science Fiction</td>
+    <tr class="sold-out">
+      <td>Americano</td>
+      <td>$8.99</td>
+      <td>195 - 205&deg;F</td>
       <td><span class="status">In Progress</span></td>
       <td>
         <span class="rate two">
@@ -64,11 +64,11 @@
       </td>
     </tr>
 
-    <tr class="read">
+    <tr class="available">
       <td>Becoming</td>
       <td>Michelle Obama</td>
       <td>Biography</td>
-      <td><span class="status">Read</span></td>
+      <td><span class="status">Available</span></td>
       <td>
         <span class="rate two">
           <span></span><span></span><span></span>
