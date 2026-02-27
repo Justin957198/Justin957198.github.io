@@ -70,3 +70,11 @@ span[class*="two"] span:nth-child(1), span[class*="two"] span:nth-child(2) {
 span[class*="three"] span:nth-child(1), span[class*="three"] span:nth-child(2), span[class*="three"] span:nth-child(3) {
     background-image: linear-gradient(to top, #5bb5ec, white);
 }
+
+span[class*="four"] span:nth-child(1), span[class*="four"] span:nth-child(2), span[class*="four"] span:nth-child(3), span[class*="four"] span:nth-child(4) {
+    background-image: linear-gradient(to top, #5bb5ec, white);
+}
+
+span[class*="five"] span:nth-child(1), span[class*="five"] span:nth-child(2), span[class*="five"] span:nth-child(3), span[class*="five"] span:nth-child(4), span[class*="five"] span:nth-child(5) {
+    background-image: linear-gradient(to top, #5bb5ec, white);
+}

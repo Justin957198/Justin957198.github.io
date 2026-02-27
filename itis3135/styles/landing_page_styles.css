@@ -36,6 +36,19 @@
   text-align: center;
 }
 
+#product-tiers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.product-tier {
+    border: 1px solid black;
+    height: 300px;
+    width: 200px;
+}
+
 footer {
     text-align: right;
 }

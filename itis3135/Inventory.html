@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div data-include="components/header.html" data-replace="%title%: Menu availability Page"></div>
+    <div data-include="components/header_2nd.html" data-replace="%title%: Menu availability Page"></div>
     <main>
         <table>
   <thead>
@@ -34,8 +34,8 @@
       <td>Hot: 140 - 155&deg;F</td>
       <td><span class="status">Available</span></td>
       <td>
-        <span class="rate three">
-          <span></span><span></span><span></span>
+        <span class="rate five">
+          <span></span><span></span><span></span><span></span><span></span>
         </span>
       </td>
     </tr>
@@ -46,8 +46,8 @@
       <td>Hot: 130 - 150&deg;F</td>
       <td><span class="status">Ordered</span></td>
       <td>
-        <span class="rate one">
-          <span></span><span></span><span></span>
+        <span class="rate two">
+          <span></span><span></span><span></span><span></span><span></span>
         </span>
       </td>
     </tr>
@@ -55,30 +55,42 @@
     <tr class="sold-out">
       <td>Americano</td>
       <td>$8.99</td>
-      <td>195 - 205&deg;F</td>
-      <td><span class="status">In Progress</span></td>
+      <td>Hot: 195 - 205&deg;F</td>
+      <td><span class="status">Sold Out</span></td>
       <td>
-        <span class="rate two">
-          <span></span><span></span><span></span>
+        <span class="rate tthree">
+          <span></span><span></span><span></span><span></span><span></span>
         </span>
       </td>
     </tr>
 
     <tr class="available">
-      <td>Becoming</td>
-      <td>Michelle Obama</td>
-      <td>Biography</td>
+      <td>Iced Caramel Macchiato</td>
+      <td>$14.99</td>
+      <td>Cold: 35 - 40&deg;F</td>
       <td><span class="status">Available</span></td>
       <td>
         <span class="rate two">
-          <span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </span>
+      </td>
+    </tr>
+
+    <tr class="ordered">
+      <td>Iced White Mocha Cold Coffee</td>
+      <td>$12.99</td>
+      <td>Cold: 34 - 40&deg;F</td>
+      <td><span class="status">Ordered</span></td>
+      <td>
+        <span class="rate four">
+          <span></span><span></span><span></span><span></span><span></span>
         </span>
       </td>
     </tr>
   </tbody>
 </table>
     </main>
-    <div data-include="components/footer.html"></div>
+    <div data-include="components/footer_2nd.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
