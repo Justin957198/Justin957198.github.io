@@ -2,13 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles/landing_page_styles.css"> 
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/landing_page_styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Deca:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Product Landing Page</title>
   </head>
 
 <body>
   <header id="header">
-    <h1 id="product-title">Jump Start Expresso Machine</h1>
+    <h1 id="product-title">Jump Start Espresso Machine</h1>
     <nav id="nav-bar">
       <a class="nav-link" href="#form">Get started</a> | 
       <a class="nav-link" href="#video">Video Walkthough</a> | 
@@ -18,26 +22,40 @@
   <main>
     <hr>
     <figure id="product-image">
-      <img id="header-img" height="300" width="550" src="images/Jump Start Coffee Machine.jpg">
+      <img id="header-img" height="300" width="550" src="images/Jump_Start_Coffee_Machine.jpg">
       <figcaption>Machine Photo</figcaption>
     </figure>
-    <form id="form" action="https://www.freecodecamp.org/email-submit">
+    <form id="form">
+      <label>Subscribe for 15% off all coffee at select stores<br></label>
       <label for="email">Enter Email Here:</label>
       <input placeholder="e.g. example@gmail" required name="email" type="email" id="email" />
-      <input id="submit" type="submit"></input>
+      <input id="submit" type="submit">
     </form>
-    <div id="features">
-      
+      <div id="product-tiers">
+      <div class="product-tier">
+        <h3>Basic Package</h3>
+        <p>350$</p>
+        <p>Include the machine, the Jump Start Brewery with great features like Precision temperature control for the perfect flavor profile. 
+          Powerful dry steam for cafe-quality micro-foam art. 
+          Industrial brushed-steel housing designed to last a lifetime.
+        </p>
+      </div>
+      <div class="product-tier">
+        <h3>Advanced Package</h3>
+        <p>450$</p>
+        <p>Includes the previous Basic Package along with automatic inclusion to Jump Start's brewer's subscription program. Comes with monthly refills of three customer selected coffee packages along with filters. Free machine maintanance for 2 years.</p>
+      </div>
+      <div class="product-tier">
+        <h3>Ultimate Brewery</h3>
+        <p>Industrial brushed-steel housing designed to last a lifetime.</p>
+      </div>
     </div>
     <div id="media">
-    <video id="video" src="" controls width="600" height="400" muted loop></video> 
-    </div>
-    <div id="product-tiers">
-      <div class="product-tier"></div><div class="product-tier"></div><div class="product-tier"></div>
+    <video id="video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" controls width="600" height="400" muted loop></video> 
     </div> 
   </main>
   <footer>
-    <p id="bottom-links">References<a href=""> Click here.</a> Page scripted by<a href=""> Justin Johnson.</p>
+    <p id="bottom-links">References<a href=""> Click here.</a> Page scripted by<a href="justin-script.net/firm_website.html"> Justin Johnson.</a></p> | 
   </footer>
 </body>
 

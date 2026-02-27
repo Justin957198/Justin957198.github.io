@@ -8,6 +8,23 @@
   background: linear-gradient(to top, orange, white);
 }
 
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+h3 {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+}
+
+p {
+    font-family: "Urbanist", 'Times New Roman', sans-serif;
+    font-size: 15px;
+}
+
 #nav-bar {
     padding: 20px;
     justify-content: flex-end;
@@ -23,6 +40,8 @@
 
 #form {
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #media {
@@ -44,9 +63,12 @@
 }
 
 .product-tier {
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
     height: 300px;
     width: 200px;
+    padding: 5px;
+    background: linear-gradient(to top, white, rgb(255, 199, 94));
 }
 
 footer {
