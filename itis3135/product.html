@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/landing_page_styles.css">
+    <link rel="stylesheet" href="styles/coffee_styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Deca:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -15,8 +16,14 @@
     <h1 id="product-title">Jump Start Espresso Machine</h1>
     <nav id="nav-bar">
       <a class="nav-link" href="#form">Get started</a> | 
-      <a class="nav-link" href="#video">Video Walkthough</a> | 
-      <a class="nav-link" href="#product-tiers">Product tiers</a>
+      <a class="nav-link" href="#media">Video Walkthough</a> | 
+      <a class="nav-link" href="#product-tiers">Product tiers</a> 
+      <br> 
+      <a class="coffee-link-header" href="Inventory.html">Coffee Inventory</a> |
+      <a class="coffee-link-header" href="survey.html">Coffee Survey</a> | 
+      <a class="coffee-link-header" href="cards.html">Coffee Menu</a> |
+      <a class="coffee-link-header" href="product.html">Expresso Machine</a> |
+      <a class="coffee-link-header" href="documentation.html">Expresso Machine Instructions</a>
     </nav> 
   </header>
   <main>
@@ -54,9 +61,8 @@
     <video id="video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" controls width="600" height="400" muted loop></video> 
     </div> 
   </main>
-  <footer>
-    <p id="bottom-links">References<a href=""> Click here.</a> Page scripted by<a href="justin-script.net/firm_website.html"> Justin Johnson.</a></p> | 
-  </footer>
+  <div data-include="components/footer_2nd.html"></div>
+  <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 
 </html>

@@ -6,16 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/card_styles.css">
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Deca:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <title>Coffee Menu</title>
 
 </head>
 
 <body>
-  <div data-include="components/header.html" data-replace="%title%: Cards Page"></div>
+  <div data-include="components/header_2nd.html" data-replace="%title%: Cards Page"></div>
   <main id="playing-cards">
     <div class="side-bar">
         <h1>Jump Start Expresso</h1>
-        <p>Welcome to Jump Start Expresso, please take a glance at our current brews.</p>
+        <h4>Welcome to Jump Start Expresso, please take a glance at our current brews.</h4>
+        <p>Whether you're looking for a morning jolt or a midday treat, Jump Start Expresso is your go-to destination for expertly crafted brews. 
+          We specialize in a range of classic and specialty coffee drinks designed to get you moving.
+          From our smooth, velvety Lattes and bold Americanos to our decadent Iced White Mocha, every cup is prepared with precision. 
+          Our cozy atmosphere and premium ingredients make us the perfect pit stop for coffee lovers who value both quality and speed.
+        </p>
+        <h5>Other Pages</h5>
+        <nav>
+          <a class="header-link-style" href="Inventory.html">Coffee Inventory</a> |
+          <a class="header-link-style" href="survey.html">Coffee Survey</a> | 
+          <a class="header-link-style" href="cards.html">Coffee Menu</a> |
+          <a class="header-link-style" href="product.html">Expresso Machine</a> |
+          <a class="header-link-style" href="documentation.html">Expresso Machine Instructions</a>
+        </nav>
     </div>
     <div class="menu-plane">
         <div class="card">
@@ -75,8 +91,7 @@
       </div>
     </div>
   </main>
-    
-  <div data-include="components/footer.html"></div>
+  <div data-include="components/footer_2nd.html"></div>
 </body>
 
 </html>

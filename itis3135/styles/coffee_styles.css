@@ -1,0 +1,32 @@
+.coffee-link-header {
+    color: black;
+    
+}
+
+.coffee-link-footer {
+    color: black;
+}
+
+header {
+    background: linear-gradient(to bottom, #bd8736, white);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+body {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+footer {
+    background: linear-gradient(to bottom, white, #bd8736);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

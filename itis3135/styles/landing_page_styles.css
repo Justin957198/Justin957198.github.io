@@ -5,7 +5,7 @@
   justify-content: space-between;
   gap: 5px;
   top: 0px;
-  background: linear-gradient(to top, orange, white);
+  background: linear-gradient(to bottom, orange, white);
 }
 
 h1 {
@@ -69,8 +69,4 @@ p {
     width: 200px;
     padding: 5px;
     background: linear-gradient(to top, white, rgb(255, 199, 94));
-}
-
-footer {
-    text-align: right;
 }
