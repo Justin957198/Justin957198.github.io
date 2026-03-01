@@ -1,0 +1,16 @@
+h1 {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+}
+
+#user-info-input, #user-judgement {
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
