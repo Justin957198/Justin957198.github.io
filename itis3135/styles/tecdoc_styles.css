@@ -7,10 +7,12 @@
 
 #navbar {
   border: 1px solid black;
+  box-sizing: border-box;
   padding: 5px;
   float: left;
   width: 40vh;
   overflow: auto;
+  height: 100vh;
 }
 
 
