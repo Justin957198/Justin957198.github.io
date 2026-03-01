@@ -1,5 +1,5 @@
 body {
-  background-color: #ffebc5;
+  background-color: white;
 }
 
 h1 {
@@ -32,7 +32,8 @@ p {
 }
 
 .side-bar {
-  justify-self: start;
+  position: relative;
+  left: 0;
   width: 300px;
   height: 100%;
   background: linear-gradient(to left, #ffebc5, rgb(255, 193, 78));
