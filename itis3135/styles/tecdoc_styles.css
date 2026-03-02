@@ -24,10 +24,11 @@ p, li {
   border: 1px solid #7E5920;
   box-sizing: border-box;
   padding: 5px;
+  margin: 5px;
   float: left;
   width: 40vh;
   overflow: auto;
-  height: 100vh;
+  height: 100%;
 }
 
 
