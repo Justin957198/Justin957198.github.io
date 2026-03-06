@@ -29,6 +29,7 @@ p {
   justify-content: center;
   flex-direction: row;
   gap: 20px;
+  padding-top: 5%;
 }
 
 .side-bar {
