@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hobby_styles/hobby_style.css">
+    <title>Justin's Hobby</title>
+</head>
+<body>
+    <nav>
+        <a href="#home" onclick="pageSlider('home')">Home</a> |
+        <a href="#info" onclick="pageSlider('info')">Information</a> |
+        <a href="#best-times" onclick="pageSlider('best-times')">Best Times</a> |
+        <a href="#great-places" onclick="pageSlider('great-places')">Places to go</a> | 
+        <a href="#computer-building-steps" onclick="pageSlider('computer-building-steps')">PC build guide</a> |
+        <a href="#why" onclick="pageSlider('why')">Why build a PC?</a> |
+        <a href="#home" onclick="pageSlider('home')">Extra</a>
+    </nav>
+    <main>
+        <section id="home" class="page active">
+            <h2>Home - about me</h2>
+            <p></p>
+            <p></p>
+            <figure>
+
+            </figure>
+
+        </section>
+        <section id="info" class="page">
+            <h2>Computer building</h2>
+            <p></p>
+            <p></p>
+            <figure>
+
+            </figure>
+        </section>
+        <section id="best-times" class="page">
+            <h2>Best times</h2>
+            <p></p>
+            <p></p>
+            <figure>
+
+            </figure>
+        </section>
+        <section id="great-places" class="page">
+            <h2>Best places</h2>
+            <p></p>
+            <p></p>
+            <figure>
+
+            </figure>
+        </section>
+        <section id="computer-building-steps" class="page">
+            <h2>Building a PC step by step</h2>
+            <p></p>
+            <p></p>
+            <figure>
+
+            </figure>
+        </section>
+        <section id="why" class="page">
+            <h2>Why should you build your own PC?</h2>
+            <p></p>
+            <p></p>
+            <figure>
+
+            </figure>
+        </section>
+        <section id="ai-prompts">
+            <h2>Ai prompts</h2>
+            <p></p>
+            <p></p>
+            <figure>
+
+            </figure>
+        </section>
+        <script>
+            function pageSlider(pageID) {
+                const pages = document.querySelectorAll('.page');
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+
+                const selectedPage = document.getElementById(pageID);
+                if(selectedPage) {
+                    selectedPage.classList.add('active');
+                }
+            }
+        </script>
+    </main>
+</body>
+</html>
