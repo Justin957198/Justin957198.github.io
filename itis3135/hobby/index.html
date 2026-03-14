@@ -3,41 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="hobby_styles/hobby_style.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <title>Justin's Hobby</title>
 </head>
-<body>
-    <nav>
-        <a href="#home" onclick="pageSlider('home')">Home</a> |
-        <a href="#info" onclick="pageSlider('info')">Information</a> |
-        <a href="#best-times" onclick="pageSlider('best-times')">Best Times</a> |
-        <a href="#great-places" onclick="pageSlider('great-places')">Places to go</a> | 
-        <a href="#computer-building-steps" onclick="pageSlider('computer-building-steps')">PC build guide</a> |
-        <a href="#why" onclick="pageSlider('why')">Why build a PC?</a> |
-        <a href="#home" onclick="pageSlider('home')">Extra</a>
-    </nav>
-    <main>
-        <section id="home" class="page active">
-            <h2>Home - about me</h2>
-            <p></p>
-            <p></p>
-            <figure>
+<style>
+header {
+    background-color: #3D315B;
+    width: 100;
+    padding: 10px;
+}
 
+body {
+    background-color: #253D5B;
+    color: #ff731d;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+}
+
+
+.page {
+    display: none;
+    padding: 20px;
+}
+
+nav, h1, a {
+    color: #FDFFFC;
+    font-family: "roboto", sans-serif;
+    text-align: center;
+}
+
+ul, li {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #306B34;
+    padding: 10px;
+    border: 2px solid #E0CA3C;
+}
+
+h2 {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+p {
+     margin-left: 10%;
+    margin-right: 10%;
+    line-height: 1.3;
+}
+
+.page.active {
+    display: block;
+}
+</style>
+<body>
+    <main>
+        <header>
+            <nav>
+            <a href="#home" onclick="pageSlider('home')">About</a> |
+            <a href="#info" onclick="pageSlider('info')">Hobby Main Page</a> |
+            <a href="#best-times" onclick="pageSlider('best-times')">Best Times</a> |
+            <a href="#great-places" onclick="pageSlider('great-places')">Places to go</a> | 
+            <a href="#computer-building-steps" onclick="pageSlider('computer-building-steps')">PC build guide</a> |
+            <a href="#why" onclick="pageSlider('why')">Why build a PC?</a> |
+            <a href="#home" onclick="pageSlider('home')">Extra</a>
+            </nav>
+            <h1>PC Building - Hobby Page</h1>
+        </header>
+        <section id="home" class="page">
+            <h2>About me / about the site.</h2>
+            <p>Greetings, my name is Justin Johnson i'm 25 years old and my goal is to become a full stack developer. 
+                However before really delved into software i was really big on PC building. 
+                Over the yeares I've built two PC's one from the money i gained at my first job, a simple tower for gaming. 
+                Years later i gave my PC to my cousin and built a second one, much more powerful and custom water cooled. 
+                I got into PC building from the internet after watching a few vidoes and tutorials, its an expensive but rewarding hobby.
+            </p>
+            <p>This multi-paged website will serve as an infographic for PC building as a bobby, with lists, tables, and pictures of PC building.</p>
+            <figure>
+                <img src="hobby_images/Self_Photo.jpg" height="300" width="250" alt="">
+                <img src="hobby_images/1st_pc.JPG" height="300" width="250" alt="">
+                <img src="hobby_images/2nd_pc.jpeg" height="300" width="250" alt="">
             </figure>
+            <p>Three images, headshot, first pc, second pc.</p>
 
         </section>
-        <section id="info" class="page">
+        <section id="info" class="page active">
             <h2>Computer building</h2>
-            <p></p>
-            <p></p>
+            <p>
+                Hobby styled Computer Building is the process of reserching or watching tutorials online about assembling parts. 
+                Buying and self assembling computer parts and troubleshooting problems.
+                The hobby mainly focuses on hands on work and requires somewhat of a steady hand and a little knowledge on how computers work.
+                The biggest comparison is <em>"Adult Legos"</em> however while legos are great for display computer building is much more rewarding.
+                The hobby doesnt end after the power light turns on, enthusiasts will often reserch and stay up to date with trends on parts and software.
+            </p>
+            <p>Computer Parts:</p>
+            <ul>
+                <li>PC Case: Optinal</li>
+                <li>Motherboard</li>
+                <li>Power Supply</li>
+                <li>Storage: hardrive and or Solid State Drive</li>
+                <li>Graphics Card</li>
+                <li>CPU: Central Processing Unit</li>
+                <li>Cooling: Air or Liquid</li>
+                <li>External IO: Monitor, Mouse, Keyboard, etc</li>
+            </ul>
             <figure>
-
+                <img src="hobby_images/cpu_picture.jpg" height="300" width="250" alt="A picture of a CPU">
+                <img src="hobby_images/pc_case_picture.jpg" height="300" width="250" alt="A picture of a pc case">
+                <img src="hobby_images/graphics_card.jpg" height="300" width="250" alt="A picture of a graphics card">
+                <img src="hobby_images/cooling_system.jpg" height="300" width="250" alt="Cooling parts picture">
             </figure>
         </section>
         <section id="best-times" class="page">
-            <h2>Best times</h2>
-            <p></p>
-            <p></p>
+            <h2>Best times and places for PC building</h2>
+            <p>The best time to build a pc is when all the parts have been purchased and set aside, the time it takes to a build one varies depending on familiarity and skill.
+                Starting out you should set aside an afternoon and a nice clean static free place for building and troubleshooting the first boot.
+                For purchasing parts events like black friday and cyber monday are great for obtaining deals, websites like Amazon and Newegg are great sources for parts.
+                Lastly the times before or after the drop of new tech mainly CPU's and GPU's the previous generations parts goon sale.
+            </p>
+            
             <figure>
 
             </figure>
@@ -66,7 +159,7 @@
 
             </figure>
         </section>
-        <section id="ai-prompts">
+        <section id="ai-prompts" class="page">
             <h2>Ai prompts</h2>
             <p></p>
             <p></p>
@@ -74,6 +167,9 @@
 
             </figure>
         </section>
+        <footer>
+
+        </footer>
         <script>
             function pageSlider(pageID) {
                 const pages = document.querySelectorAll('.page');
