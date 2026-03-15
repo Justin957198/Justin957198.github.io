@@ -3,82 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="hobby_images/favicon.ico">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <title>Justin's Hobby</title>
+    <title>PC building hobby page</title>
 </head>
-<style>
-header {
-    background-color: #3D315B;
-    width: 100;
-    padding: 10px;
-}
-
-body {
-    background-color: #253D5B;
-    color: #ff731d;
-    font-weight: 900;
-    margin: 0;
-    padding: 0;
-}
-
-
-.page {
-    display: none;
-    padding: 20px;
-}
-
-nav, h1, a {
-    color: #FDFFFC;
-    font-family: "roboto", sans-serif;
-    text-align: center;
-}
-
-ul, li {
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-figure {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    gap: 20px;
-    margin-left: 15%;
-    margin-right: 15%;
-    background-color: #306B34;
-    padding: 10px;
-    border: 2px solid #E0CA3C;
-}
-
-h2 {
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
-p {
-     margin-left: 10%;
-    margin-right: 10%;
-    line-height: 1.3;
-}
-
-.page.active {
-    display: block;
-}
-</style>
 <body>
-    <main>
         <header>
+            <h1>PC Building - Hobby Page</h1>
             <nav>
-            <a href="#home" onclick="pageSlider('home')">About</a> |
-            <a href="#info" onclick="pageSlider('info')">Hobby Main Page</a> |
-            <a href="#best-times" onclick="pageSlider('best-times')">Best Times</a> |
-            <a href="#great-places" onclick="pageSlider('great-places')">Places to go</a> | 
-            <a href="#computer-building-steps" onclick="pageSlider('computer-building-steps')">PC build guide</a> |
-            <a href="#why" onclick="pageSlider('why')">Why build a PC?</a> |
+            <a href="#home" onclick="pageSlider('home')">About</a> <img src="hobby_images/favicon.ico" height="20" width="15" alt="pc icon">
+            <a href="#info" onclick="pageSlider('info')">Hobby Main Page</a> <img src="hobby_images/favicon.ico" height="20" width="15" alt="pc icon">
+            <a href="#best-times" onclick="pageSlider('best-times')">Best Times</a> <img src="hobby_images/favicon.ico" height="20" width="15" alt="pc icon">
+            <a href="#great-places" onclick="pageSlider('great-places')">Places to go</a> <img src="hobby_images/favicon.ico" height="20" width="15" alt="pc icon"> 
+            <a href="#computer-building-steps" onclick="pageSlider('computer-building-steps')">PC build guide</a> <img src="hobby_images/favicon.ico" height="20" width="15" alt="pc icon">
+            <a href="#why" onclick="pageSlider('why')">Why build a PC?</a> <img src="hobby_images/favicon.ico" height="20" width="15" alt="pc icon">
             <a href="#home" onclick="pageSlider('home')">Extra</a>
             </nav>
-            <h1>PC Building - Hobby Page</h1>
+            <br>
         </header>
+    <main>
+
         <section id="home" class="page">
             <h2>About me / about the site.</h2>
             <p>Greetings, my name is Justin Johnson i'm 25 years old and my goal is to become a full stack developer. 
@@ -89,11 +33,10 @@ p {
             </p>
             <p>This multi-paged website will serve as an infographic for PC building as a bobby, with lists, tables, and pictures of PC building.</p>
             <figure>
-                <img src="hobby_images/Self_Photo.jpg" height="300" width="250" alt="">
-                <img src="hobby_images/1st_pc.JPG" height="300" width="250" alt="">
-                <img src="hobby_images/2nd_pc.jpeg" height="300" width="250" alt="">
+                <img class="site-pic" src="hobby_images/Self_Photo.jpg" height="300" width="250" alt="">
+                <br>
+                <figcaption id="photo-caption"><em>Headshot</em></figcaption>
             </figure>
-            <p>Three images, headshot, first pc, second pc.</p>
 
         </section>
         <section id="info" class="page active">
@@ -117,10 +60,8 @@ p {
                 <li>External IO: Monitor, Mouse, Keyboard, etc</li>
             </ul>
             <figure>
-                <img src="hobby_images/cpu_picture.jpg" height="300" width="250" alt="A picture of a CPU">
-                <img src="hobby_images/pc_case_picture.jpg" height="300" width="250" alt="A picture of a pc case">
-                <img src="hobby_images/graphics_card.jpg" height="300" width="250" alt="A picture of a graphics card">
-                <img src="hobby_images/cooling_system.jpg" height="300" width="250" alt="Cooling parts picture">
+                <img class="site-pic" src="hobby_images/cpu_picture.PNG" height="200" width="200" alt="A picture of a CPU">
+                <img class="site-pic" src="hobby_images/2nd_pc_case.PNG" height="200" width="200" alt="A picture of a pc case">
             </figure>
         </section>
         <section id="best-times" class="page">
@@ -128,25 +69,115 @@ p {
             <p>The best time to build a pc is when all the parts have been purchased and set aside, the time it takes to a build one varies depending on familiarity and skill.
                 Starting out you should set aside an afternoon and a nice clean static free place for building and troubleshooting the first boot.
                 For purchasing parts events like black friday and cyber monday are great for obtaining deals, websites like Amazon and Newegg are great sources for parts.
-                Lastly the times before or after the drop of new tech mainly CPU's and GPU's the previous generations parts goon sale.
+                Lastly the times before or after the drop of new tech mainly CPU's and GPU's the previous generations parts go on sale.
             </p>
             
             <figure>
-
+                <img class="site-pic" src="hobby_images/black_and_cyber_sale.jpg" height="200" width="350" alt="A picture of a pc case">
             </figure>
         </section>
         <section id="great-places" class="page">
             <h2>Best places</h2>
+            <p>As stated in the previous section online stores like Amazon and Newegg have tons of choices and deals in pc parts. 
+                For compatibility and exact size limits <a href="https://pcpartpicker.com/">pcpartpicker</a> is an exellent choice for planning your pc's budget and needs.
+                For in person retailers Mirco Center is trusted in the community with a vast stock of parts and even advice on pc building, another choice would be Best Buy having a smaller but decent selection.
+            </p>
             <p></p>
-            <p></p>
+            <table class="comparison-table">
+                <caption>Parts Comparison</caption>
+                <thead>
+                    <tr>
+                        <th>Part Name</th>
+                        <th>Best Place to Buy</th>
+                        <th>Average Price</th>
+                        <th>Best Brand</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CPU</td>
+                        <td>Micro Center</td>
+                        <td>$200 - $500</td>
+                        <td>AMD</td>
+                    </tr>
+                    <tr>
+                        <td>Graphics Card</td>
+                        <td>Newegg</td>
+                        <td>Mid: $700 - 1100 / Entry level: $300 - $500</td>
+                        <td>Nvidia</td>
+                    </tr>
+                    <tr>
+                        <td>Motherboard</td>
+                        <td>Amazon</td>
+                        <td>Mid: $110 - $180 / Entry level: $60 - $110 / High end: $180 - $300</td>
+                        <td>MSI</td>
+                    </tr>
+                    <tr>
+                        <td>hardrive / SSD</td>
+                        <td>Micro Center</td>
+                        <td>4TB - 5TB: $100 - $160 / 10TB - 16TB: $250 - $350</td>
+                        <td>Seagate</td>
+                    </tr>
+                </tbody>
+            </table>
             <figure>
-
+                <img class="site-pic" src="hobby_images/pc_parts_sale.jpg" height="200" width="250" alt="Computer parts on sale">
             </figure>
         </section>
         <section id="computer-building-steps" class="page">
-            <h2>Building a PC step by step</h2>
+            <h2>Build Guide</h2>
+            <p>Building a PC step by step is a big step for any tech hobbyist the main challenge comes from compatibility wether it be size or software. 
+                Forming a plan in advance is important, you cant just flood the floor with parts and pick them some are fragile and some are small, orginization is key.
+                Its better to have all tyhe parts ready at once, while building a pc as you buy the parts is possible its not recommended.
+                Lastly before getting into the checklist make sure theres very little to no static on or around you, shocks can short and destroy pc parts.</p>
             <p></p>
-            <p></p>
+            <ol>
+                <li><strong>Plan and Size PC</strong>
+                    <p>
+                        Plan out what type of PC you want the main two are Gaming and Productivity, going for both usually means sacraficing some features. 
+                        Next plan out your budget, its financially responsible to set a limit before purchasing any parts and to only exceed this if nessesary.
+                        Ensure the parts are compatable the CPU wether Intel or AMD only work with specific motherboard socket types and those same motherboards only work with certin RAM modules.
+                        All of the componients will need power so a power supply with enough output will be needed, all in a case with the correct dimensions.
+                    </p>
+                </li>
+                <li><strong>Layout Parts</strong>
+                    <p>
+                        For screwing in parts a small screw driver will do but a phillips head #2 is prefered.
+                        Build on a non carpeted surface with an anti static wrist band, also try touching the metal part of thye pc case to ground yourself.
+                        Orginize the parts in a well lit and clean area for easy acsess and retreval.
+                    </p>
+                </li>
+                <li><strong>Assemble Motherboard Componients</strong>
+                    <p>
+                        With the motherboard out and ready 'use the box as a work pad' first install the CPU in the square shaped socket latching it down when done.
+                        The RAM slot, 2 sometimes 4 will be nect to the cpu socket. If you only have two RAM sticks use slots 2 and 4 for best preformance.
+                        Next install the M.2 drive if one is present, consult the motherboards manuel the slot sould be under a detachable heatsink south of the CPU socket.
+                        Then carefully install the graphics card fan side down in the top most Pcie slot, gently push it in until you hear a click.
+                        Lastly with a pea sized drop of thermal paste mount the CPU cooler making sure the copper part is touching the top of the CPU.
+                    </p>
+                </li>
+                <li><strong>Secure Motherboard and Case Componients</strong>
+                    <p>
+                        Most motherboards come with an IO shield, this should be installed in the case first make sure its nice and snug at the back of the pc case.
+                        Screw in the standoffs these will keep the motherboard up off the back of the case, then line up the motherboard and screw it into the standoffs.
+                        The powersupply should have its own compartment or go at the bottom of the case with the switch and in plug facing out and the out plungs facing in.
+                        The hardrive will then go into a drawer or be screwed into a trey near the front of the case.
+                    </p>
+                </li>
+                <li><strong>Wire It Up</strong>
+                    <p>
+                        Now we must connect our componients together, from the power supply the 24 pin connecter should be connected to the motherboards 24 pin socket and the 8 pin CPU power cord should be installed.
+                        The graphics card being souch a powerful piece of tech needs a direct line to the power supply so install the PCIe power cable from the powersupply to the 4/8 socket on the graphics card.
+                        The front panel buttons on the PC case have connecters that will need to be plugged into the motherboard, the manuel will have the header pin layout.
+                        Connect the SATA and power cables to any hardrives in the PC.
+                    </p>
+                    <hr>
+                        <p>*Due note the order of this isnt important and shoild be done in a way to maximize cable orginization.*</p>
+                </li>
+                <li><strong>Attempt First Boot - Install OS</strong>
+
+                </li>
+            </ol>
             <figure>
 
             </figure>
@@ -161,28 +192,125 @@ p {
         </section>
         <section id="ai-prompts" class="page">
             <h2>Ai prompts</h2>
-            <p></p>
-            <p></p>
+            <ul>
+                <li>Generate a picture of a custom built pc</li>
+                <li>Generate an image of pc parts going on sale</li>
+                <li>Generate pictures for black friday and cyber monday for pc parts</li>
+            </ul>
             <figure>
 
             </figure>
         </section>
-        <footer>
-
-        </footer>
         <script>
             function pageSlider(pageID) {
                 const pages = document.querySelectorAll('.page');
-                pages.forEach(page => {
+                pages.forEach((page) => {
                     page.classList.remove('active');
                 });
 
                 const selectedPage = document.getElementById(pageID);
-                if(selectedPage) {
+                if (selectedPage) {
                     selectedPage.classList.add('active');
                 }
             }
         </script>
     </main>
+    <footer>
+        <br>
+         <p>Page created by <a class="footer-link-style" href="../justin-script.net/firm_website.html">Justin-Script.net</a>. Certified in <a class="footer-link-style" href="https://www.freecodecamp.org/certification/justin_johnson/responsive-web-design-v9">Responsive Web Design</a></p>   
+    </footer>
 </body>
+<style>
+header {
+    background-color: #3D315B;
+    width: 100;
+    color: #F4D35E;
+    height: 15vh;
+}
+
+footer {
+    background-color: #3D315B;
+    width: 100;
+    height: 15vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #253D5B;
+    color: #ff731d;
+    
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    border: 1px solid #F4D35E;
+    flex: 1;
+    padding: 10px;
+}
+
+
+.page {
+    display: none;
+    padding: 20;
+}
+
+nav, h1, a {
+    color: #FDFFFC;
+    font-family: "roboto", sans-serif;
+    text-align: center;
+}
+
+ul, li {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+figure {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 10;
+}
+
+figcaption {
+    text-align: center;
+}
+
+.site-pic {
+    border: 1px solid #F4D35E;
+}
+
+h2 {
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
+
+p {
+     margin-left: 10%;
+    margin-right: 10%;
+    line-height: 1.3;
+}
+
+#comparison-table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #F4D35E;
+    padding: 5px;
+    background-color: rgba(6, 71, 0, 0.849);
+}
+
+#photo-caption {
+    justify-content: center;
+}
+
+.page.active {
+    display: block;
+}
+</style>
 </html>
