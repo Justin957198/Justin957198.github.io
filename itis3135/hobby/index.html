@@ -5,6 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="hobby_images/favicon.ico">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Silkscreen:wght@400;700&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <style>
+        header {
+            background-color: #3D315B;
+            width: 100;
+            color: #F4D35E;
+            height: 20vh;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #3D315B;
+            width: 100;
+            height: 15vh;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #253D5B;
+            color: #ff731d;
+            
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            border: 1px solid #F4D35E;
+            flex: 1;
+            padding: 10px;
+        }
+
+
+        .page {
+            display: none;
+            padding: 20;
+        }
+
+        h1 {
+            color: #FDFFFC;
+            font-family: "Tomorrow", sans-serif;
+            text-align: center;
+        }
+
+        nav, a {
+            text-align: center;
+            font-family: "Tektur", sans-serif;
+            color: orange;
+        }
+
+        ul, li {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        legend {
+            color: #F4D35E;;
+        }
+
+        figure {
+            display: block;
+            justify-content: center;
+            text-align: center;
+            gap: 20px;
+            margin-left: 20%;
+            margin-right: 20%;
+            padding: 10;
+        }
+
+        figcaption {
+            text-align: center;
+        }
+
+        .pic-row {
+            text-align: center;
+        }
+
+        .site-pic {
+            border: 1px solid #F4D35E;
+        }
+
+        h2 {
+            margin-left: 15%;
+            margin-right: 15%;
+            text-align: center;
+            font-family: "Silkscreen", sans-serif;
+        }
+
+        p {
+            margin-left: 10%;
+            margin-right: 10%;
+            line-height: 1.3;
+            text-indent: 40px;
+            font-family: "Roboto Serif", sans-serif;
+        }
+
+        label {
+            font-family: Georgia, serif;
+        }
+
+        li {
+            font-family: "Geo", sans-serif;
+            font-size: larger;
+        }
+
+        #comparison-table, table{
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            border: 2px solid #F4D35E;
+            padding: 5px;
+            background-color: rgba(6, 71, 0, 0.849);
+        }
+
+        #photo-caption {
+            justify-content: center;
+        }
+
+        .page.active {
+            display: block;
+        }
+    </style>
     <title>PC building hobby page</title>
 </head>
 <body>
@@ -25,13 +150,13 @@
 
         <section id="home" class="page">
             <h2>About me / about the site.</h2>
-            <p>Greetings, my name is Justin Johnson i'm 25 years old and my goal is to become a full stack developer. 
+            <p>Greetings, my name is Justin Johnson I'm 25 years old and my goal is to become a full stack developer. 
                 However before really delved into software i was really big on PC building. 
-                Over the yeares I've built two PC's one from the money i gained at my first job, a simple tower for gaming. 
+                Over the years I've built two PC's one from the money i gained at my first job, a simple tower for gaming. 
                 Years later i gave my PC to my cousin and built a second one, much more powerful and custom water cooled. 
-                I got into PC building from the internet after watching a few vidoes and tutorials, its an expensive but rewarding hobby.
+                I got into PC building from the internet after watching a few videos and tutorials, its an expensive but rewarding hobby.
             </p>
-            <p>This multi-paged website will serve as an infographic for PC building as a bobby, with lists, tables, and pictures of PC building.</p>
+            <p>This multi-paged website will serve as an infographic for PC building as a bobby, with lists, tables, and pictures of PC building. The top header can be used to navigate the many pages.</p>
             <figure>
                 <img class="site-pic" src="hobby_images/Self_Photo.jpg" height="300" width="250" alt="">
                 <br>
@@ -42,46 +167,63 @@
         <section id="info" class="page active">
             <h2>Computer building</h2>
             <p>
-                Hobby styled Computer Building is the process of reserching or watching tutorials online about assembling parts. 
+                Hobby styled Computer Building is the process of researching or watching tutorials online about assembling parts. 
                 Buying and self assembling computer parts and troubleshooting problems.
                 The hobby mainly focuses on hands on work and requires somewhat of a steady hand and a little knowledge on how computers work.
                 The biggest comparison is <em>"Adult Legos"</em> however while legos are great for display computer building is much more rewarding.
-                The hobby doesnt end after the power light turns on, enthusiasts will often reserch and stay up to date with trends on parts and software.
+                The hobby doesn't end after the power light turns on, enthusiasts will often research and stay up to date with trends on parts and software.
             </p>
             <p>Computer Parts:</p>
             <ul>
-                <li>PC Case: Optinal</li>
+                <li>PC Case: Optional</li>
                 <li>Motherboard</li>
                 <li>Power Supply</li>
-                <li>Storage: hardrive and or Solid State Drive</li>
+                <li>Storage: Hardrive and or Solid State Drive</li>
                 <li>Graphics Card</li>
                 <li>CPU: Central Processing Unit</li>
                 <li>Cooling: Air or Liquid</li>
-                <li>External IO: Monitor, Mouse, Keyboard, etc</li>
+                <li>External IO: Monitor, Mouse, Keyboard, etc.</li>
             </ul>
             <figure>
-                <img class="site-pic" src="hobby_images/cpu_picture.PNG" height="200" width="200" alt="A picture of a CPU">
-                <img class="site-pic" src="hobby_images/2nd_pc_case.PNG" height="200" width="200" alt="A picture of a pc case">
+                <div class="pic-row">
+                    <img class="site-pic" src="hobby_images/cpu_picture.jpg" height="200" width="250" alt="A picture of a CPU">
+                    <img class="site-pic" src="hobby_images/empty_pc.jpg" height="200" width="250" alt="A picture of a pc case">
+                </div>
                 <figcaption><em>CPU and Case</em></figcaption>
             </figure>
+            <hr>
+                <p><em>Used AI to generate a picture of a CPU and an empty pc case.</em></p>
         </section>
         <section id="best-times" class="page">
             <h2>Best times and places for PC building</h2>
             <p>The best time to build a pc is when all the parts have been purchased and set aside, the time it takes to a build one varies depending on familiarity and skill.
                 Starting out you should set aside an afternoon and a nice clean static free place for building and troubleshooting the first boot.
-                For purchasing parts events like black friday and cyber monday are great for obtaining deals, websites like Amazon and Newegg are great sources for parts.
+                For purchasing parts events like black Friday and cyber Monday are great for obtaining deals, websites like Amazon and Newegg are great sources for parts.
                 Lastly the times before or after the drop of new tech mainly CPU's and GPU's the previous generations parts go on sale.
             </p>
-            
+            <form>
+                <fieldset>
+                    <legend>Promotion Updates</legend>
+                    <label>Enter email below to get updates on PC parts:</label>
+                    <input required placeholder="e.g. JohnDoe@example.com" type="email" size="100">
+                    <br>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
             <figure>
-                <img class="site-pic" src="hobby_images/black_and_cyber_sale.jpg" height="200" width="350" alt="A picture of a pc case">
+                <div class="pic-row">
+                    <img class="site-pic" src="hobby_images/black_and_cyber_sale.jpg" height="200" width="350" alt="A picture of a pc case">
+                </div>
+                <figcaption>An AI generated photo of two pc part sale posters.</figcaption>
             </figure>
+            <hr>
+                <p><em>Used AI to generate a picture of a sale poster for Black Friday and Cyber Monday.</em></p>
         </section>
         <section id="great-places" class="page">
             <h2>Best places</h2>
             <p>As stated in the previous section online stores like Amazon and Newegg have tons of choices and deals in pc parts. 
-                For compatibility and exact size limits <a href="https://pcpartpicker.com/">pcpartpicker</a> is an exellent choice for planning your pc's budget and needs.
-                For in person retailers Mirco Center is trusted in the community with a vast stock of parts and even advice on pc building, another choice would be Best Buy having a smaller but decent selection.
+                For compatibility and exact size limits <a href="https://pcpartpicker.com/">pcpartpicker</a> is an excellent choice for planning your pc's budget and needs.
+                For in person retailers Micro Center is trusted in the community with a vast stock of parts and even advice on pc building, another choice would be Best Buy having a smaller but decent selection.
             </p>
             <p></p>
             <table class="comparison-table">
@@ -114,7 +256,7 @@
                         <td>MSI</td>
                     </tr>
                     <tr>
-                        <td>hardrive / SSD</td>
+                        <td>Hardrive / SSD</td>
                         <td>Micro Center</td>
                         <td>4TB - 5TB: $100 - $160 / 10TB - 16TB: $250 - $350</td>
                         <td>Seagate</td>
@@ -122,85 +264,127 @@
                 </tbody>
             </table>
             <figure>
-                <img class="site-pic" src="hobby_images/pc_parts_sale.jpg" height="200" width="250" alt="Computer parts on sale">
+                <div class="pic-row">
+                    <img class="site-pic" src="hobby_images/pc_parts_sale.jpg" height="200" width="250" alt="Computer parts on sale">
+                </div>
+                <figcaption>A photo of pc parts on sale</figcaption>
             </figure>
+            <hr>
+                <p><em>Used AI to generate a picture of the inside of a store while a sale for pc parts is ongoing.</em></p>
         </section>
         <section id="computer-building-steps" class="page">
             <h2>Build Guide</h2>
-            <p>Building a PC step by step is a big step for any tech hobbyist the main challenge comes from compatibility wether it be size or software. 
-                Forming a plan in advance is important, you cant just flood the floor with parts and pick them some are fragile and some are small, orginization is key.
-                Its better to have all tyhe parts ready at once, while building a pc as you buy the parts is possible its not recommended.
-                Lastly before getting into the checklist make sure theres very little to no static on or around you, shocks can short and destroy pc parts.</p>
+            <p>Building a PC step by step is a big step for any tech hobbyist the main challenge comes from compatibility whether it be size or software. 
+                Forming a plan in advance is important, you cant just flood the floor with parts and pick them some are fragile and some are small, organization is key.
+                Its better to have all the parts ready at once, while building a pc as you buy the parts is possible its not recommended.
+                Lastly before getting into the checklist make sure there's very little to no static on or around you, shocks can short and destroy pc parts.</p>
             <p></p>
             <ol>
                 <li><strong>Plan and Size PC</strong>
                     <p>
-                        Plan out what type of PC you want the main two are Gaming and Productivity, going for both usually means sacraficing some features. 
-                        Next plan out your budget, its financially responsible to set a limit before purchasing any parts and to only exceed this if nessesary.
-                        Ensure the parts are compatable the CPU wether Intel or AMD only work with specific motherboard socket types and those same motherboards only work with certin RAM modules.
-                        All of the componients will need power so a power supply with enough output will be needed, all in a case with the correct dimensions.
+                        Plan out what type of PC you want the main two are Gaming and Productivity, going for both usually means sacrificing some features. 
+                        Next plan out your budget, its financially responsible to set a limit before purchasing any parts and to only exceed this if necessary.
+                        Ensure the parts are compatible the CPU whether Intel or AMD only work with specific motherboard socket types and those same motherboards only work with certain RAM modules.
+                        All of the components will need power so a power supply with enough output will be needed, all in a case with the correct dimensions.
                     </p>
                 </li>
                 <li><strong>Layout Parts</strong>
                     <p>
-                        For screwing in parts a small screw driver will do but a phillips head #2 is prefered.
-                        Build on a non carpeted surface with an anti static wrist band, also try touching the metal part of thye pc case to ground yourself.
-                        Orginize the parts in a well lit and clean area for easy acsess and retreval.
+                        For screwing in parts a small screw driver will do but a Phillips head #2 is preferred.
+                        Build on a non carpeted surface with an anti static wrist band, also try touching the metal part of the pc case to ground yourself.
+                        Organize the parts in a well lit and clean area for easy access and retrieval.
                     </p>
                 </li>
-                <li><strong>Assemble Motherboard Componients</strong>
+                <li><strong>Assemble Motherboard Components</strong>
                     <p>
                         With the motherboard out and ready 'use the box as a work pad' first install the CPU in the square shaped socket latching it down when done.
-                        The RAM slot, 2 sometimes 4 will be nect to the cpu socket. If you only have two RAM sticks use slots 2 and 4 for best preformance.
-                        Next install the M.2 drive if one is present, consult the motherboards manuel the slot sould be under a detachable heatsink south of the CPU socket.
-                        Then carefully install the graphics card fan side down in the top most Pcie slot, gently push it in until you hear a click.
+                        The RAM slot, 2 sometimes 4 will be next to the CPU socket. If you only have two RAM sticks use slots 2 and 4 for best performance.
+                        Next install the M.2 drive if one is present, consult the motherboards Manuel the slot should be under a detachable heatsink south of the CPU socket.
+                        Then carefully install the graphics card fan side down in the top most PCIE slot, gently push it in until you hear a click.
                         Lastly with a pea sized drop of thermal paste mount the CPU cooler making sure the copper part is touching the top of the CPU.
                     </p>
                 </li>
-                <li><strong>Secure Motherboard and Case Componients</strong>
+                <li><strong>Secure Motherboard and Case Components</strong>
                     <p>
                         Most motherboards come with an IO shield, this should be installed in the case first make sure its nice and snug at the back of the pc case.
                         Screw in the standoffs these will keep the motherboard up off the back of the case, then line up the motherboard and screw it into the standoffs.
-                        The powersupply should have its own compartment or go at the bottom of the case with the switch and in plug facing out and the out plungs facing in.
-                        The hardrive will then go into a drawer or be screwed into a trey near the front of the case.
+                        The power supply should have its own compartment or go at the bottom of the case with the switch and in plug facing out and the out plugs facing in.
+                        The Hardrive will then go into a drawer or be screwed into a trey near the front of the case.
                     </p>
                 </li>
                 <li><strong>Wire It Up</strong>
                     <p>
-                        Now we must connect our componients together, from the power supply the 24 pin connecter should be connected to the motherboards 24 pin socket and the 8 pin CPU power cord should be installed.
-                        The graphics card being souch a powerful piece of tech needs a direct line to the power supply so install the PCIe power cable from the powersupply to the 4/8 socket on the graphics card.
-                        The front panel buttons on the PC case have connecters that will need to be plugged into the motherboard, the manuel will have the header pin layout.
-                        Connect the SATA and power cables to any hardrives in the PC.
+                        Now we must connect our components together, from the power supply the 24 pin connecter should be connected to the motherboards 24 pin socket and the 8 pin CPU power cord should be installed.
+                        The graphics card being such a powerful piece of tech needs a direct line to the power supply so install the PCIe power cable from the power supply to the 4/8 socket on the graphics card.
+                        The front panel buttons on the PC case have connecters that will need to be plugged into the motherboard, the Manuel will have the header pin layout.
+                        Connect the SATA and power cables to any Hardrives in the PC.
                     </p>
                     <hr>
-                        <p>*Due note the order of this isnt important and shoild be done in a way to maximize cable orginization.*</p>
+                        <p>*Due note the order of this isn't important and should be done in a way to maximize cable organization.*</p>
                 </li>
                 <li><strong>Attempt First Boot - Install OS</strong>
                     <p>
-                        With all thw labeled wires connected and the power supply switch flipped on plug in the PC and press the cases power button, if everything was installed correctly the PC should boot to a black screen waiting for a OS to be installed.
-                        The motherboards manuel should should contain the specific button that needs to be pressed on start up to reach the bios.
+                        With all the labeled wires connected and the power supply switch flipped on plug in the PC and press the cases power button, if everything was installed correctly the PC should boot to a black screen waiting for a OS to be installed.
+                        The motherboards Manuel should contain the specific button that needs to be pressed on start up to reach the bios.
                         An OS boot drive should be inserted and the direction followed to set up your brand new PC.
                     </p>
                 </li>
             </ol>
             <figure>
-
+                <div class="pic-row">
+                    <img class="site-pic" src="hobby_images/pc_being_built.jpg" height="250" width="300" alt="picture of a pc being built">
+                </div>
+                <figcaption>Picture of an ongoing PC build</figcaption>
             </figure>
+            <br>
+                <p><em>Used AI to generate a picture of a PC being built.</em></p>
         </section>
         <section id="why" class="page">
             <h2>Why should you build your own PC?</h2>
-            <p></p>
-            <p></p>
-            <figure>
+            <p>Why build one, especially when buying one is so much cheaper well for starters building a PC and using it a huge achievement and a great conversation starter.
 
+            </p>
+            <p>Some of the main benefits are:</p>
+            <ul>
+                <li>
+                    <strong>Cost Effectiveness</strong>
+                    <p>Building a PC is better in the long run as parts can go on sale and be mixed and matched for the best deal.
+                        A newly build PC doesn't come with unnecessary bloatware that creates pop ups and slows down the system.
+                    </p>
+                </li>
+                <li>
+                    <strong>Full Customization</strong>
+                    <p>
+                        A custom built PC can be personalized much more than one bought already built.
+                    </p>
+                </li>
+                <li>
+                    <strong>Better Longevity</strong>
+                    <p>
+                        Better custom cooling options means parts will work better and last longer.
+                    </p>
+                </li>
+            </ul>
+            <figure>
+                <div>
+                    <img class="site-pic" src="hobby_images/prebuilt_vs_custom.jpg" height="200" width="200" alt="prebuilt pc">
+                    <img class="site-pic" src="hobby_images/custom_pc_2.jpg" height="200" width="200" alt="custom pc">
+                </div>
+                <figcaption>Two pictures one of a prebuilt pc and another of a custom pc.</figcaption>
             </figure>
+            <hr>
+                <p><em>Used AI to generate a picture of a prebuilt pc and a custom pc.</em></p>
         </section>
         <section id="ai-prompts" class="page">
             <h2>Ai prompts</h2>
+            <p>AI was only used to generate photos.</p>
             <ul>
                 <li>Generate a picture of a custom built pc</li>
                 <li>Generate an image of pc parts going on sale</li>
-                <li>Generate pictures for black friday and cyber monday for pc parts</li>
+                <li>Generate pictures for black Friday and cyber Monday for pc parts</li>
+                <li>Generate two pictures one of a prebuilt tower pc and the second on a custom pc</li>
+                <li>Generate a picture of a CPU</li>
+                <li>Generate a picture of an empty pc case</li>
             </ul>
             <figure>
 
@@ -225,99 +409,4 @@
          <p>Page created by <a class="footer-link-style" href="../justin-script.net/firm_website.html">Justin-Script.net</a>. Certified in <a class="footer-link-style" href="https://www.freecodecamp.org/certification/justin_johnson/responsive-web-design-v9">Responsive Web Design</a></p>   
     </footer>
 </body>
-<style>
-header {
-    background-color: #3D315B;
-    width: 100;
-    color: #F4D35E;
-    height: 15vh;
-}
-
-footer {
-    text-align: center;
-    background-color: #3D315B;
-    width: 100;
-    height: 15vh;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    background-color: #253D5B;
-    color: #ff731d;
-    
-    margin: 0;
-    padding: 0;
-}
-
-main {
-    border: 1px solid #F4D35E;
-    flex: 1;
-    padding: 10px;
-}
-
-
-.page {
-    display: none;
-    padding: 20;
-}
-
-nav, h1, a {
-    color: #FDFFFC;
-    font-family: "roboto", sans-serif;
-    text-align: center;
-}
-
-ul, li {
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-figure {
-    display: block;
-    justify-content: center;
-    text-align: center;
-    gap: 20px;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding: 10;
-}
-
-figcaption {
-    text-align: center;
-}
-
-.site-pic {
-    border: 1px solid #F4D35E;
-}
-
-h2 {
-    margin-left: 15%;
-    margin-right: 15%;
-    text-align: center;
-}
-
-p {
-     margin-left: 10%;
-    margin-right: 10%;
-    line-height: 1.3;
-}
-
-#comparison-table, table{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    border: 2px solid #F4D35E;
-    padding: 5px;
-    background-color: rgba(6, 71, 0, 0.849);
-}
-
-#photo-caption {
-    justify-content: center;
-}
-
-.page.active {
-    display: block;
-}
-</style>
 </html>
