@@ -17,7 +17,7 @@
             <a href="#great-places" onclick="pageSlider('great-places')">Places to go</a> <img src="hobby_images/favicon.ico" height="20" width="15" alt="pc icon"> 
             <a href="#computer-building-steps" onclick="pageSlider('computer-building-steps')">PC build guide</a> <img src="hobby_images/favicon.ico" height="20" width="15" alt="pc icon">
             <a href="#why" onclick="pageSlider('why')">Why build a PC?</a> <img src="hobby_images/favicon.ico" height="20" width="15" alt="pc icon">
-            <a href="#home" onclick="pageSlider('home')">Extra</a>
+            <a href="#ai-prompts" onclick="pageSlider('ai-prompts')">Extra</a>
             </nav>
             <br>
         </header>
@@ -35,7 +35,7 @@
             <figure>
                 <img class="site-pic" src="hobby_images/Self_Photo.jpg" height="300" width="250" alt="">
                 <br>
-                <figcaption id="photo-caption"><em>Headshot</em></figcaption>
+                <figcaption><em>Headshot</em></figcaption>
             </figure>
 
         </section>
@@ -62,6 +62,7 @@
             <figure>
                 <img class="site-pic" src="hobby_images/cpu_picture.PNG" height="200" width="200" alt="A picture of a CPU">
                 <img class="site-pic" src="hobby_images/2nd_pc_case.PNG" height="200" width="200" alt="A picture of a pc case">
+                <figcaption><em>CPU and Case</em></figcaption>
             </figure>
         </section>
         <section id="best-times" class="page">
@@ -175,7 +176,11 @@
                         <p>*Due note the order of this isnt important and shoild be done in a way to maximize cable orginization.*</p>
                 </li>
                 <li><strong>Attempt First Boot - Install OS</strong>
-
+                    <p>
+                        With all thw labeled wires connected and the power supply switch flipped on plug in the PC and press the cases power button, if everything was installed correctly the PC should boot to a black screen waiting for a OS to be installed.
+                        The motherboards manuel should should contain the specific button that needs to be pressed on start up to reach the bios.
+                        An OS boot drive should be inserted and the direction followed to set up your brand new PC.
+                    </p>
                 </li>
             </ol>
             <figure>
@@ -229,6 +234,7 @@ header {
 }
 
 footer {
+    text-align: center;
     background-color: #3D315B;
     width: 100;
     height: 15vh;
@@ -297,9 +303,10 @@ p {
     line-height: 1.3;
 }
 
-#comparison-table {
+#comparison-table, table{
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
     border: 2px solid #F4D35E;
     padding: 5px;
     background-color: rgba(6, 71, 0, 0.849);
