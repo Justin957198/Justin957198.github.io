@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <script src="scripts/introduction.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div data-include="components/header.html" data-replace="%title%: Introduction Form"></div>
+    <main class="form-page-splitter">
+        <section class="form-side">
+            <h3>Please fill out form below</h3>
+            <form id="introduction-input">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="first-name">First name:</label>
+                    <input type="text" id="first-name">
+                    <label for="middle-name">Middle name:</label>
+                    <input type="text" id="middle-name">
+                    <br>
+                    <label for="nick-name">Nickname:</label>
+                    <input type="text" id="nick-name">
+                    <label for="last-name">Last name:</label>
+                    <input type="text" id="last-name">
+                    <br>
+                    <label>I understand that what i put here is publicly available on the web and i won’t put anything here i dont want the public to see</label>
+                    <br>
+                    <input type="checkbox" id="ack-check">
+                    <input type="date">
+                </fieldset>
+                <fieldset>
+                    <legend>Personalization / Pictures</legend>
+                    <label for="mascot-adjective">Mascot Adjective:</label>
+                    <input type="text" id="mascot-adjective">
+                    <label for="mascot-animal">Mascot Animal:</label>
+                    <input type="text" id="mascot-animal">
+                    <br>
+                    <label for="divider">Divider:</label>
+                    <input type="text" id="divider" placeholder="e.g. ~, |, etc">
+                    <label for="picture-upload">Drop picture here:</label>
+                    <input type="file" id="picture-upload">
+                    <br>
+                    <label>Picture Caption:</label>
+                    <input type="text" id="pic-cap">
+                    <br>
+                    <label for="pes-statment">Personal Statement:</label>
+                    <input type="text" id="pes-statment">
+                </fieldset>
+                <fieldset>
+                    <legend>Personal Background</legend>
+                    <label for="personal-background">Personal Background:</label>
+                    <input type="text" id="personal-background">
+                    <label for="professional-background">Professional Background:</label>
+                    <input type="text" id="professional-background">
+                    <br>
+                    <label for="acedemic-background">Academic Background:</label>
+                    <input type="text" id="acedemic-background" placeholder="e.g. ~, |, etc">
+                    <label for="subject-background">Background in Subject:</label>
+                    <input type="text" id="subject-background">
+                    <br>
+                    <label for="primary-computer">Primary Computer / Workstation:</label>
+                    <input type="text" id="primary-computer">
+                    <br>
+                    <label for="secondary-computer">Secondary Computer / Workstation:</label>
+                    <input type="text" id="secondary-computer">
+                </fieldset>
+                <fieldset>
+                    <legend>Courses being taken:</legend>
+                    <div id="one" class="selection">
+                        <label for="course">Course your taking:</label>
+                        <input type="text" id="course">
+                        <label for="course-why">Why?:</label>
+                        <input type="text" id="course-why">
+                    </div>
+                    <div id="two" class="selection hidden">
+                        <label for="course2">Course your taking:</label>
+                        <input type="text" id="course2">
+                        <label for="course-why2">Why?:</label>
+                        <input type="text" id="course-why2">
+                    </div>
+                    <div id="three" class="selection hidden">
+                        <label for="course3">Course your taking:</label>
+                        <input type="text" id="course3">
+                        <label for="course-why3">Why?:</label>
+                        <input type="text" id="course-why3">
+                    </div>
+                    <div id="four" class="selection hidden">
+                        <label for="course4">Course your taking:</label>
+                        <input type="text" id="course4">
+                        <label for="course-why4">Why?:</label>
+                        <input type="text" id="course-why4">
+                    </div>
+                    <div id="five" class="selection hidden">
+                        <label for="course5">Course your taking:</label>
+                        <input type="text" id="course5">
+                        <label for="course-why5">Why?:</label>
+                        <input type="text" id="course-why5">
+                    </div>
+                    <div id="six" class="selection hidden">
+                        <label for="course6">Course your taking:</label>
+                        <input type="text" id="course6">
+                        <label for="course-why6">Why?:</label>
+                        <input type="text" id="course-why6">
+                    </div>
+                    <div id="seven" class="selection hidden">
+                        <label for="course7">Course your taking:</label>
+                        <input type="text" id="course7">
+                        <label for="course-why7">Why?:</label>
+                        <input type="text" id="course-why7">
+                    </div>
+                    <div>
+                        <button type="button" onclick="revealNext()">+</button>
+                        <button type="button">-</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+        <section class="display-side">
+            <h3>Display here</h3>
+        </section>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

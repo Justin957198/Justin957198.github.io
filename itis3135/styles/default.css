@@ -47,6 +47,21 @@ main {
     
 }
 
+.form-page-splitter {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: center;
+}
+
+.form-side {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.display-side {
+
+}
+
 h1 {
     font-family: "cabin", sans-serif;
     text-align: center;
@@ -58,6 +73,14 @@ h2 {
 
 p {
     text-indent: 40px;
+}
+
+.selection.hidden {
+    display: none;
+}
+
+.selection {
+    display: block;
 }
 
 footer {
