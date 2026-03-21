@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <script src="scripts/introduction.js"></script>
+    <script src="scripts/introduction.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -23,108 +23,166 @@
                 <fieldset>
                     <legend>Personal Information</legend>
                     <label for="first-name">First name:</label>
-                    <input type="text" id="first-name">
+                    <input required type="text" id="first-name" name="first_name" value="Justin">
                     <label for="middle-name">Middle name:</label>
-                    <input type="text" id="middle-name">
+                    <input required type="text" id="middle-name" name="middle_name" value="L">
                     <br>
                     <label for="nick-name">Nickname:</label>
-                    <input type="text" id="nick-name">
+                    <input required type="text" id="nick-name" name="nick_name" value="JDog2000">
                     <label for="last-name">Last name:</label>
-                    <input type="text" id="last-name">
+                    <input required type="text" id="last-name" name="last_name" value="Johnson">
                     <br>
                     <label>I understand that what i put here is publicly available on the web and i won’t put anything here i dont want the public to see</label>
                     <br>
-                    <input type="checkbox" id="ack-check">
-                    <input type="date">
+                    <input required type="checkbox" id="ack-check" name="ack_check">
+                    <input required type="date" name="date">
                 </fieldset>
                 <fieldset>
                     <legend>Personalization / Pictures</legend>
                     <label for="mascot-adjective">Mascot Adjective:</label>
-                    <input type="text" id="mascot-adjective">
+                    <input required type="text" id="mascot-adjective" name="mascot_adjective" value="Jumping">
                     <label for="mascot-animal">Mascot Animal:</label>
-                    <input type="text" id="mascot-animal">
+                    <input required type="text" id="mascot-animal" name="mascot_animal" value="Jackrabbit">
                     <br>
                     <label for="divider">Divider:</label>
-                    <input type="text" id="divider" placeholder="e.g. ~, |, etc">
+                    <input required type="text" id="divider" placeholder="e.g. ~, |, etc" name="divider" value="|">
                     <label for="picture-upload">Drop picture here:</label>
-                    <input type="file" id="picture-upload">
+                    <input required type="file" id="picture-upload" name="picture_upload">
                     <br>
                     <label>Picture Caption:</label>
-                    <input type="text" id="pic-cap">
+                    <input required type="text" id="pic-cap" name="picture_caption" value="my first plane ride">
                     <br>
                     <label for="pes-statment">Personal Statement:</label>
-                    <input type="text" id="pes-statment">
+                    <input required type="text" id="pes-statment" name="personal_statement" value="I am a junior attending here at UNCC. I'm a computer science major with a concentration in Web/App development. I’m excited to learn how to put a face on the backends and servers I'm in progress of making.">
                 </fieldset>
                 <fieldset>
                     <legend>Personal Background</legend>
                     <label for="personal-background">Personal Background:</label>
-                    <input type="text" id="personal-background">
+                    <input required type="text" id="personal-background" name="personal_background" value="I am 25 years old and have always had a fascination with computers, this led me to building two personal computers and diving into building software.">
                     <label for="professional-background">Professional Background:</label>
-                    <input type="text" id="professional-background">
+                    <input required type="text" id="professional-background" name="personal_background" value="This is my 5th semester in the computer science major. I am currently employed at Amazon while I attend.">
                     <br>
                     <label for="acedemic-background">Academic Background:</label>
-                    <input type="text" id="acedemic-background" placeholder="e.g. ~, |, etc">
+                    <input required type="text" id="acedemic-background" placeholder="" name="acedemic_background" value="I am currently a junior attending UNCC with a major in computer science with a concentration in Web/App development. I transferred here after getting my associates degree from CPCC.">
                     <label for="subject-background">Background in Subject:</label>
-                    <input type="text" id="subject-background">
+                    <input required type="text" id="subject-background" name="subject_background" value="While i dont have much experience in front end languages, I've spent the last year rapidly learning java with a bit of Python in my various classes. I’ve also been working on a few basic beginner projects on my github albeit most of them are private.">
                     <br>
                     <label for="primary-computer">Primary Computer / Workstation:</label>
-                    <input type="text" id="primary-computer">
+                    <input required type="text" id="primary-computer" name="primary_computer" value="My primary work computer is my ASUS Vivobook laptop I bring with me to school and anywhere else I will be staying for a while.">
                     <br>
                     <label for="secondary-computer">Secondary Computer / Workstation:</label>
-                    <input type="text" id="secondary-computer">
+                    <input required type="text" id="secondary-computer" name="secondary_computer" value="My back up computer would be a custom built water cooled rig I have at home which has most of the same required programs needed for classwork">
                 </fieldset>
                 <fieldset>
                     <legend>Courses being taken:</legend>
                     <div id="one" class="selection">
                         <label for="course">Course your taking:</label>
-                        <input type="text" id="course">
+                        <input required type="text" id="course" name="course_one" value="Justin">
+                        <br>
+                        <label for="course-num">Enter course number:</label>
+                        <input required type="number" id="course-num" name="course_one_number" value="0000">
+                        <br>
                         <label for="course-why">Why?:</label>
-                        <input type="text" id="course-why">
+                        <input required type="text" id="course-why" name="course_one_why" value="Justin">
                     </div>
-                    <div id="two" class="selection hidden">
+                    <div id="two" class="selection-hidden" style="display: none;">
                         <label for="course2">Course your taking:</label>
-                        <input type="text" id="course2">
+                        <input type="text" id="course2" name="course_two" >
+                        <br>
+                        <label for="course-num2">Enter course number:</label>
+                        <input type="number" id="course-num2" name="course_two_number" >
+                        <br>
                         <label for="course-why2">Why?:</label>
-                        <input type="text" id="course-why2">
+                        <input type="text" id="course-why2" name="course_two_why" >
                     </div>
-                    <div id="three" class="selection hidden">
+                    <div id="three" class="selection-hidden" style="display: none;">
                         <label for="course3">Course your taking:</label>
-                        <input type="text" id="course3">
+                        <input type="text" id="course3" name="course_three" >
+                        <br>
+                        <label for="course-num3">Enter course number:</label>
+                        <input type="number" id="course-num3" name="course_three_number" >
+                        <br>
                         <label for="course-why3">Why?:</label>
-                        <input type="text" id="course-why3">
+                        <input type="text" id="course-why3" name="course_three_why" >
                     </div>
-                    <div id="four" class="selection hidden">
+                    <div id="four" class="selection-hidden" style="display: none;">
                         <label for="course4">Course your taking:</label>
-                        <input type="text" id="course4">
+                        <input type="text" id="course4" name="course_four" >
+                        <br>
+                        <label for="course-num4">Enter course number:</label>
+                        <input type="number" id="course-num4" name="course_four_number" >
+                        <br>
                         <label for="course-why4">Why?:</label>
-                        <input type="text" id="course-why4">
+                        <input type="text" id="course-why4" name="course_four_why" >
                     </div>
-                    <div id="five" class="selection hidden">
+                    <div id="five" class="selection-hidden" style="display: none;">
                         <label for="course5">Course your taking:</label>
-                        <input type="text" id="course5">
+                        <input type="text" id="course5" name="course_five" >
+                        <br>
+                        <label for="course-num5">Enter course number:</label>
+                        <input type="number" id="course-num5" name="course_five_number" >
+                        <br>
                         <label for="course-why5">Why?:</label>
-                        <input type="text" id="course-why5">
+                        <input type="text" id="course-why5" name="course_five_why" >
                     </div>
-                    <div id="six" class="selection hidden">
+                    <div id="six" class="selection-hidden" style="display: none;">
                         <label for="course6">Course your taking:</label>
-                        <input type="text" id="course6">
+                        <input type="text" id="course6" name="course_six" >
+                        <br>
+                        <label for="course-num6">Enter course number:</label>
+                        <input type="number" id="course-num6" name="course_six_number" >
+                        <br>
                         <label for="course-why6">Why?:</label>
-                        <input type="text" id="course-why6">
+                        <input type="text" id="course-why6" name="course_six_why" >
                     </div>
-                    <div id="seven" class="selection hidden">
+                    <div id="seven" class="selection-hidden" style="display: none;">
                         <label for="course7">Course your taking:</label>
-                        <input type="text" id="course7">
+                        <input type="text" id="course7" name="course_seven" >
+                        <br>
+                        <label for="course-num7">Enter course number:</label>
+                        <input type="number" id="course-num7" name="course_seven_number" >
+                        <br>
                         <label for="course-why7">Why?:</label>
-                        <input type="text" id="course-why7">
+                        <input type="text" id="course-why7" name="course_seven_why" >
                     </div>
                     <div>
-                        <button type="button" onclick="revealNext()">+</button>
-                        <button type="button">-</button>
+                        <button id="add-course-btn" type="button">+</button>
+                        <button id="rem-course-btn" type="button">-</button>
                     </div>
+                    <hr>
                 </fieldset>
+                <fieldset>
+                    <legend>Quotes and opinions</legend>
+                    <label for="Quote">Favorite Quote:</label>
+                    <input required type="text" id="Quote" name="quote" value="Justin">
+                    <br>
+                    <label for="quote-author">Quote Author:</label>
+                    <input required type="text" id="quote-author" name="quote_author" value="Justin">
+                    <br>
+                    <label for="funny-messege">Funny Messege:</label>
+                    <input required type="text" id="funny-messege" name="funny_messege" value="Justin">
+                    <br>
+                    <label for="thoughts">Something to share:</label>
+                    <input required type="text" id="thoughts" name="thoughts" value="Justin">
+                    <br>
+                    <label for="link">Five links:</label>
+                    <input required type="text" id="link" name="link_one" value="Justin">
+                    <br>
+                    <input required type="text" id="link2" name="link_two" value="Justin">
+                    <br>
+                    <input required type="text" id="link3" name="link_three" value="Justin">
+                    <br>
+                    <input required type="text" id="link4" name="link_four" value="Justin"> 
+                    <br>
+                    <input required type="text" id="link5" name="link_five" value="Justin">
+                </fieldset>
+            <h4>Form Buttons</h4>
+            <button id="submit" type="submit">Submit Form</button>
+            <button id="clear-btn" type="reset">Clear Form</button>
+            <button id="reset-btn">Reset Form</button>
             </form>
         </section>
-        <section class="display-side">
+        <section id="display-side" class="submission-card">
             <h3>Display here</h3>
         </section>
     </main>
