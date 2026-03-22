@@ -28,14 +28,14 @@
                     <input required type="text" id="middle-name" name="middle_name" value="L">
                     <br>
                     <label for="nick-name">Nickname:</label>
-                    <input required type="text" id="nick-name" name="nick_name" value="JDog2000">
+                    <input required type="text" id="nick-name" name="nick_name" value="JLJ">
                     <label for="last-name">Last name:</label>
                     <input required type="text" id="last-name" name="last_name" value="Johnson">
                     <br>
-                    <label>I understand that what i put here is publicly available on the web and i won’t put anything here i dont want the public to see</label>
+                    <label id="ack-statement">I understand that what i put here is publicly available on the web and i won’t put anything here i dont want the public to see</label>
                     <br>
                     <input required type="checkbox" id="ack-check" name="ack_check">
-                    <input required type="date" name="date">
+                    <input required type="date" id="get-date" name="date">
                 </fieldset>
                 <fieldset>
                     <legend>Personalization / Pictures</legend>
@@ -52,8 +52,8 @@
                     <label>Picture Caption:</label>
                     <input required type="text" id="pic-cap" name="picture_caption" value="my first plane ride">
                     <br>
-                    <label for="pes-statment">Personal Statement:</label>
-                    <input required type="text" id="pes-statment" name="personal_statement" value="I am a junior attending here at UNCC. I'm a computer science major with a concentration in Web/App development. I’m excited to learn how to put a face on the backends and servers I'm in progress of making.">
+                    <label for="personal-statement">Personal Statement:</label>
+                    <input required type="text" id="personal-statement" name="personal_statement" value="I am a junior attending here at UNCC. I'm a computer science major with a concentration in Web/App development. I’m excited to learn how to put a face on the backends and servers I'm in progress of making.">
                 </fieldset>
                 <fieldset>
                     <legend>Personal Background</legend>
@@ -77,73 +77,73 @@
                     <legend>Courses being taken:</legend>
                     <div id="one" class="selection">
                         <label for="course">Course your taking:</label>
-                        <input required type="text" id="course" name="course_one" value="Justin">
+                        <input required class="course-name" type="text" id="course" name="course_one" value="Database Design and Implementation">
                         <br>
                         <label for="course-num">Enter course number:</label>
-                        <input required type="number" id="course-num" name="course_one_number" value="0000">
+                        <input required class="course-number" type="number" id="course-num" name="course_one_number" value="3160">
                         <br>
                         <label for="course-why">Why?:</label>
-                        <input required type="text" id="course-why" name="course_one_why" value="Justin">
+                        <input required class="course-reason" type="text" id="course-why" name="course_one_why" value="To solidify my knowledge on databases and utilize them better.">
                     </div>
-                    <div id="two" class="selection-hidden" style="display: none;">
+                    <div id="two" class="selection">
                         <label for="course2">Course your taking:</label>
-                        <input type="text" id="course2" name="course_two" >
+                        <input class="course-name" type="text" id="course2" name="course_two" value="Introduction to Human Centered Computing">
                         <br>
                         <label for="course-num2">Enter course number:</label>
-                        <input type="number" id="course-num2" name="course_two_number" >
+                        <input class="course-number" type="number" id="course-num2" name="course_two_number" value="3130">
                         <br>
                         <label for="course-why2">Why?:</label>
-                        <input type="text" id="course-why2" name="course_two_why" >
+                        <input class="course-reason" type="text" id="course-why2" name="course_two_why" value="To create programs that are usable by all and understand how users interact with them.">
                     </div>
-                    <div id="three" class="selection-hidden" style="display: none;">
+                    <div id="three" class="selection">
                         <label for="course3">Course your taking:</label>
-                        <input type="text" id="course3" name="course_three" >
+                        <input class="course-name" type="text" id="course3" name="course_three" value="Intro to Probability and Statistics">
                         <br>
                         <label for="course-num3">Enter course number:</label>
-                        <input type="number" id="course-num3" name="course_three_number" >
+                        <input class="course-number" type="number" id="course-num3" name="course_three_number" value="2122">
                         <br>
                         <label for="course-why3">Why?:</label>
-                        <input type="text" id="course-why3" name="course_three_why" >
+                        <input class="course-reason" type="text" id="course-why3" name="course_three_why" value="Required">
                     </div>
-                    <div id="four" class="selection-hidden" style="display: none;">
+                    <div id="four" class="selection" style="display: none;">
                         <label for="course4">Course your taking:</label>
-                        <input type="text" id="course4" name="course_four" >
+                        <input class="course-name" type="text" id="course4" name="course_four" value="Front End Web App Development">
                         <br>
                         <label for="course-num4">Enter course number:</label>
-                        <input type="number" id="course-num4" name="course_four_number" >
+                        <input class="course-number" type="number" id="course-num4" name="course_four_number" value="3135">
                         <br>
                         <label for="course-why4">Why?:</label>
-                        <input type="text" id="course-why4" name="course_four_why" >
+                        <input class="course-reason" type="text" id="course-why4" name="course_four_why" value="To learn html and css for making front ends and becoming full stack.">
                     </div>
-                    <div id="five" class="selection-hidden" style="display: none;">
-                        <label for="course5">Course your taking:</label>
+                    <div id="five" class="selection" style="display: none;">
+                        <label class="course-name" for="course5">Course your taking:</label>
                         <input type="text" id="course5" name="course_five" >
                         <br>
                         <label for="course-num5">Enter course number:</label>
-                        <input type="number" id="course-num5" name="course_five_number" >
+                        <input class="course-number" type="number" id="course-num5" name="course_five_number" >
                         <br>
                         <label for="course-why5">Why?:</label>
-                        <input type="text" id="course-why5" name="course_five_why" >
+                        <input class="course-reason" type="text" id="course-why5" name="course_five_why" >
                     </div>
-                    <div id="six" class="selection-hidden" style="display: none;">
-                        <label for="course6">Course your taking:</label>
+                    <div id="six" class="selection" style="display: none;">
+                        <label class="course-name" for="course6">Course your taking:</label>
                         <input type="text" id="course6" name="course_six" >
                         <br>
                         <label for="course-num6">Enter course number:</label>
-                        <input type="number" id="course-num6" name="course_six_number" >
+                        <input class="course-number" type="number" id="course-num6" name="course_six_number" >
                         <br>
                         <label for="course-why6">Why?:</label>
-                        <input type="text" id="course-why6" name="course_six_why" >
+                        <input class="course-reason" type="text" id="course-why6" name="course_six_why" >
                     </div>
-                    <div id="seven" class="selection-hidden" style="display: none;">
+                    <div id="seven" class="selection" style="display: none;">
                         <label for="course7">Course your taking:</label>
-                        <input type="text" id="course7" name="course_seven" >
+                        <input class="course-name" type="text" id="course7" name="course_seven" >
                         <br>
                         <label for="course-num7">Enter course number:</label>
-                        <input type="number" id="course-num7" name="course_seven_number" >
+                        <input class="course-number" type="number" id="course-num7" name="course_seven_number" >
                         <br>
                         <label for="course-why7">Why?:</label>
-                        <input type="text" id="course-why7" name="course_seven_why" >
+                        <input class="course-reason" type="text" id="course-why7" name="course_seven_why" >
                     </div>
                     <div>
                         <button id="add-course-btn" type="button">+</button>
@@ -154,27 +154,27 @@
                 <fieldset>
                     <legend>Quotes and opinions</legend>
                     <label for="Quote">Favorite Quote:</label>
-                    <input required type="text" id="Quote" name="quote" value="Justin">
+                    <input required type="text" id="Quote" name="quote" value="Dont let what you cannot do interfere with what you can do.">
                     <br>
                     <label for="quote-author">Quote Author:</label>
-                    <input required type="text" id="quote-author" name="quote_author" value="Justin">
+                    <input required type="text" id="quote-author" name="quote_author" value="John Wooden">
                     <br>
                     <label for="funny-messege">Funny Messege:</label>
-                    <input required type="text" id="funny-messege" name="funny_messege" value="Justin">
+                    <input type="text" id="funny-messege" name="funny_messege" value="">
                     <br>
                     <label for="thoughts">Something to share:</label>
-                    <input required type="text" id="thoughts" name="thoughts" value="Justin">
+                    <input type="text" id="thoughts" name="thoughts" value="I’ve successfully built and maintained two computers.">
                     <br>
                     <label for="link">Five links:</label>
-                    <input required type="text" id="link" name="link_one" value="Justin">
+                    <input required type="text" id="link" name="link_one" value="Github.io">
                     <br>
-                    <input required type="text" id="link2" name="link_two" value="Justin">
+                    <input required type="text" id="link2" name="link_two" value="Github">
                     <br>
-                    <input required type="text" id="link3" name="link_three" value="Justin">
+                    <input required type="text" id="link3" name="link_three" value="CLT Web">
                     <br>
-                    <input required type="text" id="link4" name="link_four" value="Justin"> 
+                    <input required type="text" id="link4" name="link_four" value="FreeCodeCamp"> 
                     <br>
-                    <input required type="text" id="link5" name="link_five" value="Justin">
+                    <input required type="text" id="link5" name="link_five" value="Linkedln">
                 </fieldset>
             <h4>Form Buttons</h4>
             <button id="submit" type="submit">Submit Form</button>
@@ -182,7 +182,7 @@
             <button id="reset-btn">Reset Form</button>
             </form>
         </section>
-        <section id="display-side" class="submission-card">
+        <section id="form-output" class="submission-card">
             <h3>Display here</h3>
         </section>
     </main>
