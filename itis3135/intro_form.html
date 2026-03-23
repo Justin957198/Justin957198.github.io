@@ -19,7 +19,7 @@
     <main class="form-page-splitter">
         <section class="form-side">
             <h3>Please fill out form below</h3>
-            <form id="introduction-input">
+            <form id="intro-form">
                 <fieldset>
                     <legend>Personal Information</legend>
                     <label for="first-name">First name:</label>
@@ -34,7 +34,7 @@
                     <br>
                     <label id="ack-statement">I understand that what i put here is publicly available on the web and i won’t put anything here i dont want the public to see</label>
                     <br>
-                    <input required type="checkbox" id="ack-check" name="ack_check">
+                    <input type="checkbox" id="ack-check" name="ack_check" required>
                     <input required type="date" id="get-date" name="date">
                 </fieldset>
                 <fieldset>
@@ -60,7 +60,7 @@
                     <label for="personal-background">Personal Background:</label>
                     <input required type="text" id="personal-background" name="personal_background" value="I am 25 years old and have always had a fascination with computers, this led me to building two personal computers and diving into building software.">
                     <label for="professional-background">Professional Background:</label>
-                    <input required type="text" id="professional-background" name="personal_background" value="This is my 5th semester in the computer science major. I am currently employed at Amazon while I attend.">
+                    <input required type="text" id="professional-background" name="professional_background" value="This is my 5th semester in the computer science major. I am currently employed at Amazon while I attend.">
                     <br>
                     <label for="acedemic-background">Academic Background:</label>
                     <input required type="text" id="acedemic-background" placeholder="" name="acedemic_background" value="I am currently a junior attending UNCC with a major in computer science with a concentration in Web/App development. I transferred here after getting my associates degree from CPCC.">
@@ -80,70 +80,70 @@
                         <input required class="course-name" type="text" id="course" name="course_one" value="Database Design and Implementation">
                         <br>
                         <label for="course-num">Enter course number:</label>
-                        <input required class="course-number" type="number" id="course-num" name="course_one_number" value="3160">
+                        <input required class="course-number" type="number" id="course-num" name="course_num1" value="3160">
                         <br>
                         <label for="course-why">Why?:</label>
-                        <input required class="course-reason" type="text" id="course-why" name="course_one_why" value="To solidify my knowledge on databases and utilize them better.">
+                        <input required class="course-reason" type="text" id="course-why" name="course_why1" value="To solidify my knowledge on databases and utilize them better.">
                     </div>
                     <div id="two" class="selection">
                         <label for="course2">Course your taking:</label>
                         <input class="course-name" type="text" id="course2" name="course_two" value="Introduction to Human Centered Computing">
                         <br>
                         <label for="course-num2">Enter course number:</label>
-                        <input class="course-number" type="number" id="course-num2" name="course_two_number" value="3130">
+                        <input class="course-number" type="number" id="course-num2" name="course_num2" value="3130">
                         <br>
                         <label for="course-why2">Why?:</label>
-                        <input class="course-reason" type="text" id="course-why2" name="course_two_why" value="To create programs that are usable by all and understand how users interact with them.">
+                        <input class="course-reason" type="text" id="course-why2" name="course_why2" value="To create programs that are usable by all and understand how users interact with them.">
                     </div>
                     <div id="three" class="selection">
                         <label for="course3">Course your taking:</label>
                         <input class="course-name" type="text" id="course3" name="course_three" value="Intro to Probability and Statistics">
                         <br>
                         <label for="course-num3">Enter course number:</label>
-                        <input class="course-number" type="number" id="course-num3" name="course_three_number" value="2122">
+                        <input class="course-number" type="number" id="course-num3" name="course_num3" value="2122">
                         <br>
                         <label for="course-why3">Why?:</label>
-                        <input class="course-reason" type="text" id="course-why3" name="course_three_why" value="Required">
+                        <input class="course-reason" type="text" id="course-why3" name="course_why3" value="Required">
                     </div>
-                    <div id="four" class="selection" style="display: none;">
+                    <div id="four" class="selection">
                         <label for="course4">Course your taking:</label>
                         <input class="course-name" type="text" id="course4" name="course_four" value="Front End Web App Development">
                         <br>
                         <label for="course-num4">Enter course number:</label>
-                        <input class="course-number" type="number" id="course-num4" name="course_four_number" value="3135">
+                        <input class="course-number" type="number" id="course-num4" name="course_num4" value="3135">
                         <br>
                         <label for="course-why4">Why?:</label>
-                        <input class="course-reason" type="text" id="course-why4" name="course_four_why" value="To learn html and css for making front ends and becoming full stack.">
+                        <input class="course-reason" type="text" id="course-why4" name="course_why4" value="This class is for learning how to make professional / human friendly front ends.">
                     </div>
                     <div id="five" class="selection" style="display: none;">
                         <label class="course-name" for="course5">Course your taking:</label>
                         <input type="text" id="course5" name="course_five" >
                         <br>
                         <label for="course-num5">Enter course number:</label>
-                        <input class="course-number" type="number" id="course-num5" name="course_five_number" >
+                        <input class="course-number" type="number" id="course-num5" name="course_num5" >
                         <br>
                         <label for="course-why5">Why?:</label>
-                        <input class="course-reason" type="text" id="course-why5" name="course_five_why" >
+                        <input class="course-reason" type="text" id="course-why5" name="course_why5" >
                     </div>
                     <div id="six" class="selection" style="display: none;">
                         <label class="course-name" for="course6">Course your taking:</label>
                         <input type="text" id="course6" name="course_six" >
                         <br>
                         <label for="course-num6">Enter course number:</label>
-                        <input class="course-number" type="number" id="course-num6" name="course_six_number" >
+                        <input class="course-number" type="number" id="course-num6" name="course_num6" >
                         <br>
                         <label for="course-why6">Why?:</label>
-                        <input class="course-reason" type="text" id="course-why6" name="course_six_why" >
+                        <input class="course-reason" type="text" id="course-why6" name="course_why6" >
                     </div>
                     <div id="seven" class="selection" style="display: none;">
                         <label for="course7">Course your taking:</label>
                         <input class="course-name" type="text" id="course7" name="course_seven" >
                         <br>
                         <label for="course-num7">Enter course number:</label>
-                        <input class="course-number" type="number" id="course-num7" name="course_seven_number" >
+                        <input class="course-number" type="number" id="course-num7" name="course_num7" >
                         <br>
                         <label for="course-why7">Why?:</label>
-                        <input class="course-reason" type="text" id="course-why7" name="course_seven_why" >
+                        <input class="course-reason" type="text" id="course-why7" name="course_why7" >
                     </div>
                     <div>
                         <button id="add-course-btn" type="button">+</button>
@@ -178,11 +178,11 @@
                 </fieldset>
             <h4>Form Buttons</h4>
             <button id="submit" type="submit">Submit Form</button>
-            <button id="clear-btn" type="reset">Clear Form</button>
+            <button id="clear-btn" type="reset" onclick="clearForm()">Clear Form</button>
             <button id="reset-btn">Reset Form</button>
             </form>
         </section>
-        <section id="form-output" class="submission-card">
+        <section id="displayArea" class="submission-card">
             <h3>Display here</h3>
         </section>
     </main>

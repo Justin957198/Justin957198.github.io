@@ -2,7 +2,7 @@ const addBtn = document.getElementById('add-course-btn');
 const remBtn = document.getElementById('rem-course-btn');
 const subBtn = document.getElementById('submit');
 const courseElements = document.querySelectorAll('.selection'); // Use a class for your hidden rows
-let currentIndex = 3;
+let currentIndex = 4;
 
 // 2. Add the event listener
 addBtn.addEventListener('click', function() {
@@ -23,200 +23,178 @@ remBtn.addEventListener('click', function() {
         alert("Needs atleat one couse!");
     }
 });
-
-/*
-const introForm = document.getElementById('introduction-input');
-const displayArea = document.getElementById('display-side');
-
-    introForm.addEventListener('submit', function(event) {
-        // 1. Prevent the page from reloading
-        event.preventDefault();
-
-        // 2. Grab the data from the form
-        const formData = new FormData(introForm);
-        
-        // 3. Create a clean string or HTML to display
-        let output = "";
-        
-        formData.forEach((value, key) => {
-        // Skip empty fields
-            if (!value || value === "") return;
-
-            const row = document.createElement('div');
-            row.className = 'data-row';
-
-            // Format the label (e.g., "first_name" -> "First Name")
-            const labelText = key.replace(/_/g, ' ');
-        
-            // Check if the value is an image file
-            if (value instanceof File && value.type.startsWith('image/')) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    row.innerHTML = `
-                        <span class="data-label">${labelText}:</span>
-                        <img src="${e.target.result}" style="max-width: 200px; border-radius: 5px; margin-top: 10px;">
-                    `;
-                };
-                reader.readAsDataURL(value);
-            } else {
-                // Standard text row
-                row.innerHTML = `
-                    <span class="data-label">${labelText}:</span>
-                    <span class="data-value">${value}</span>
-                `;
-            }
-        
-            displayArea.appendChild(row);
-        });
-        
-
-        
-        alert("Form submitted successfully!");
-    });
-*/
 const clearBtn = document.getElementById('clear-btn');
 
-if (clearBtn) {
-    clearBtn.addEventListener('click', function() {
-        // This only clears the input fields within the form
-        introForm.reset();
-        
-        // Optional: provide a small notification in the console or an alert
-        console.log("Form inputs have been cleared.");
-    });
+function clearForm() {
+    // This targets your form by its ID
+    const form = document.getElementById('intro-form'); 
+    form.reset(); // Resets to defaults
+    
+    // This manually clears every text field just in case
+    const inputs = form.querySelectorAll('input[type="text"], textarea');
+    inputs.forEach(input => input.value = '');
 }
 
-subBtn.addEventListener('click', function(event) {
-    event.preventDefault(); // Prevents the page from refreshing
+const updateData = () => {
+    const form = document.getElementById('intro-form');
+    const displayArea = document.getElementById('displayArea');
 
-    // 1. Capture basic info
-    const firstName = document.getElementById('first-name').value;
-    const middleName = document.getElementById('middle-name').value;
-    const lastName = document.getElementById('last-name').value;
-    const nickName = document.getElementById('nick-name').value;
-    //const ackCheck = document.getElementById('ack-check');
-    let ackText = "";
-    const ackDate = document.getElementById('get-date').value;
-    const divider = document.getElementById('divider').value;
-    const mascotAdjective = document.getElementById('mascot-adjective').value;
-    const animal = document.getElementById('mascot-animal').value;
-    
-    // --- IMAGE FIX START ---
-    const imageInput = document.getElementById('picture-upload');
-    const imageFile = imageInput.files[0];
-    let imageUrl = ""; 
+    const courseEntries = document.querySelectorAll('.selection');
 
-    if (imageFile) {
-        // Create the temporary URL for the uploaded file
-        imageUrl = URL.createObjectURL(imageFile);
-    } else {
-        imageUrl = "..\images\Justin_plane.jpg";
-    }
-    // --- IMAGE FIX END ---
+    let coursesHTML = "";
 
-    const personalStatement = document.getElementById('personal-statement').value;
-    const personalBackground = document.getElementById('personal-background').value;
-    const professionalBackground = document.getElementById('professional-background').value;
-    const acedemicBackground = document.getElementById('acedemic-background').value;
-    const backgoundInSubject = document.getElementById('subject-background').value;
-    const primaryComputer = document.getElementById('primary-computer').value;
-    const secondaryComputer = document.getElementById('secondary-computer').value;
+courseEntries.forEach((entry) => {
+    // 2. SPOT: Only proceed if the container is NOT hidden
+    if (entry.style.display !== "none" && !entry.classList.contains("hidden")) {
+        
+        // 3. Look for the inputs INSIDE this specific entry
+        const name = entry.querySelector('input[name^="course_"]')?.value || "";
+        const num = entry.querySelector('input[name^="course_num"]')?.value || "";
+        const why = entry.querySelector('input[name^="course_why"]')?.value || "";
 
-    // Bottom info
-    const favoriteQuote = document.getElementById('Quote').value;
-    const quoteAuthor = document.getElementById('quote-author').value;
-    const funnyMessege = document.getElementById('funny-messege').value;
-    const somethingToShare = document.getElementById('thoughts').value;
-    const link1 = document.getElementById('link').value;
-    const link2 = document.getElementById('link2').value;
-    const link3 = document.getElementById('link3').value;
-    const link4 = document.getElementById('link4').value;
-    const link5 = document.getElementById('link5').value;
-
-    // 2. Capture dynamic courses
-    const courseNames = document.querySelectorAll('.course-name');
-    const courseNumbers = document.querySelectorAll('.course-number');
-    const courseWhys = document.querySelectorAll('.course-reason');
-
-    let coursesHTML = "<ul>";
-    for (let i = 0; i < courseNames.length; i++) {
-        const name = courseNames[i].value;
-        const num = courseNumbers[i].value;
-        const why = courseWhys[i].value;
-
-        if (name || num) { 
-            coursesHTML += `<li><strong>${num} ${name}</strong>: ${why}</li>`;
+        if (name || num) {
+            coursesHTML += `<li><strong>${num}:</strong> ${name} <em>${why}</em></li>`;
         }
     }
-
-    const ackCheckbox = document.getElementById('ack-check');
-    const ackStatementArea = document.getElementById('ack-statement'); // The text to display
+});
     
-    // 2. Check the .checked property directly in the IF statement
-    if (ackCheckbox.checked) {
-        // If checked, grab the text from your "I understand..." label/statement
-        // You can also just hardcode the string here
-        ackText = "I understand that what i put here is publicly available on the web and i won’t put anything here i dont want the public to see";
-        
-        // ... (The rest of your code to build the output) ...
-        
-        // 3. Add it to your innerHTML template
-        // <h3>${ackText}</h3>
-    } else {
-        alert('Please check the agreement box before submitting!');
-        return; // This stops the rest of the function from running
+    if (!form || !displayArea) return;
+
+    const data = new FormData(form);
+    // This one line replaces your entire 'for' loop!
+    const currentFormData = Object.fromEntries(data.entries());
+
+    // Image Handling
+    const fileInput = document.querySelector('input[name="picture_upload"]');
+    let objectURL = "https://via.placeholder.com/300"; 
+
+    if (fileInput && fileInput.files[0]) {
+        objectURL = URL.createObjectURL(fileInput.files[0]);
     }
 
-    if (ackDate === null) {
-        alert("Please check date");
-        return;
-    }
-    coursesHTML += "</ul>";
-
-    // 3. Format the output
-    const outputArea = document.getElementById('form-output');
-    outputArea.innerHTML = `
-        <div style="border: 1px solid #ccc; padding: 20px; background: white; font-family: Arial, sans-serif;">
-            <p>${ackText} - ${nickName} - ${ackDate}</p>
-            <h1 style="text-align: center;">${firstName} ${middleName} ${lastName} ${divider} ${mascotAdjective} ${animal}</h1>
+    displayArea.innerHTML = `
+        <div style="border: 1px solid #ccc; padding: 20px; background: white; font-family: Arial, sans-serif; color: #000000;">
+            <p>I understand that what i put here is publicly available on the web and i won’t put anything here i dont want the public to see</p>
+            <p><strong>Agreement:</strong> ${currentFormData.ack_check ? 'Confirmed ✅' : 'Pending ⏳'} - ${currentFormData.nick_name || ''} - ${currentFormData.date || ''}</p>
+            <h1 style="text-align: center; margin-bottom: 10px;">
+                ${currentFormData.first_name || ''} ${currentFormData.middle_name || ''} ${currentFormData.last_name || ''} 
+                <span style="color: #000000;">${currentFormData.divider || '|'}</span> 
+                ${currentFormData.mascot_adjective || ''} ${currentFormData.mascot_animal || ''}
+            </h1>
             <hr>
-            <div style="text-align:center;">
-                <img src="${imageUrl}" alt="Justin's Photo" style="max-width: 300px; height: auto;">
+            <div style="text-align:center; margin: 20px 0;">
+                <img src="${objectURL}" alt="User Photo" style="max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p><em>${currentFormData.picture_caption || ''}</em></p>
             </div>
-            <p>${personalStatement}</p>
             
-            <h3>Personal Background:</h3>
-            <p>${personalBackground}</p>
+            <p>${currentFormData.personal_statement || ''}</p>
+        
+            <ul>
+                <li><strong>Personal Background:</strong>${currentFormData.personal_background || ''}</li>
+                <li><strong>Professional Background:</strong> ${currentFormData.professional_background || ''}</li>
+                <li><strong>Academic Background:</strong> ${currentFormData.acedemic_background || ''}</li>
+                <li><strong>Backgound in Subject:</strong> ${currentFormData.subject_background || ''}</li>
+            </ul>
 
-            <h3>Professional Background:</h3>
-            <p>${professionalBackground}</p>
+            <p><strong>Primary Work Computer:</strong> ${currentFormData.primary_computer || ''}</p>
+            <p><strong>Backup Work Computer & Location Plan:</strong> ${currentFormData.secondary_computer || ''}</p>
 
-            <h3>Academic Background:</h3>
-            <p>${acedemicBackground}</p>
-
-            <h3>Background In Subject:</h3>
-            <p>${backgoundInSubject}</p>
-
-            <h3>Primary Work Computer:</h3>
-            <p>${primaryComputer}</p>
-
-            <h3>Backup Work Computer & Location Plan:</h3>
-            <p>${secondaryComputer}</p>
-            
             <h3>Courses I'm taking and why:</h3>
-            ${coursesHTML}
+            <ul>
+                ${coursesHTML || "<li>No courses added yet.</li>"}
+            </ul>
 
-            <h3>Funny Messege:</h3>
-            ${funnyMessege}
+            <p><strong>I'd also like to share:</strong> ${currentFormData.thoughts || ''}</p>
 
-            <h3>Something I'd Like To Share:</h3>
-            ${somethingToShare}
+        
+            <h3>Quote:</h3>
+            <p style="background: #f9f9f9; padding: 10px; border-left: 5px solid #ccc;">
+                <em>"${currentFormData.quote || ''}"</em> <br>
+                <span style="float: right;">- <strong>${currentFormData.quote_author || ''}</strong></span>
+                <span style="clear: both; display: block;"></span>
+            </p>
 
-            <h3>Quote - Author:</h3>
-            <p><em>${favoriteQuote}</em></p><br><p><em>-${quoteAuthor}</em></p>
-
-           
-            ${link1} | ${link2} | ${link3} | ${link4} | ${link5}
+            <nav style="text-align: center; color: #1155cc;">
+                <strong>Links:</strong> ${currentFormData.link_one || ''} | ${currentFormData.link_two || ''} | ${currentFormData.link_three || ''} | ${currentFormData.link_four || ''} | ${currentFormData.link_five || ''}
+            </nav>
         </div>
     `;
+};
+
+// --- THE REAL-TIME MAGIC ---
+// This waits for the page to load, then watches for any typing/clicking
+document.addEventListener('DOMContentLoaded', () => {
+    const introForm = document.getElementById('intro-form');
+    if (introForm) {
+        // Listen for typing (input) or clicking (change)
+        introForm.addEventListener('input', updateData);
+        // Initialize the preview once on load
+        updateData();
+    }
 });
+/*
+const updateData = () => {
+    const form = document.getElementById('introduction-input');
+    const displayArea = document.getElementById('live-preview');
+    const data = new FormData(form);
+    const currentFormData = {};
+    
+    // Convert FormData to a plain object
+    for (let [key, value] of data.entries()) {
+        currentFormData[key] = value;
+    }
+
+    const fileInput = document.querySelector('input[name="picture_upload"]');
+    // Use a placeholder if no image is uploaded yet
+    let objectURL = "https://via.placeholder.com/300"; 
+
+    if (fileInput && fileInput.files[0]) {
+        objectURL = URL.createObjectURL(fileInput.files[0]);
+    }
+
+    if (displayArea) {
+        displayArea.innerHTML = `
+            <div style="border: 1px solid #ccc; padding: 20px; background: white; font-family: Arial, sans-serif;">
+                <p>Agreement: ${currentFormData.ack_check ? 'Confirmed' : 'Pending'} - ${currentFormData.nick_name || ''} - ${currentFormData.date || ''}</p>
+                <h1 style="text-align: center;">
+                    ${currentFormData.first_name || ''} ${currentFormData.middle_name || ''} ${currentFormData.last_name || ''} 
+                    ${currentFormData.divider || '|'} 
+                    ${currentFormData.mascot_adjective || ''} ${currentFormData.mascot_animal || ''}
+                </h1>
+                <hr>
+                <div style="text-align:center;">
+                    <img src="${objectURL}" alt="User Photo" style="max-width: 300px; height: auto; border-radius: 8px;">
+                    <p><em>${currentFormData.picture_caption || ''}</em></p>
+                </div>
+                
+                <h3>Personal Statement:</h3>
+                <p>${currentFormData.personal_statement || ''}</p>
+            
+                <h3>Background:</h3>
+                <ul>
+                    <li><strong>Personal:</strong> ${currentFormData.personal_background || ''}</li>
+                    <li><strong>Academic:</strong> ${currentFormData.acedemic_background || ''}</li>
+                    <li><strong>Subject:</strong> ${currentFormData.subject_background || ''}</li>
+                </ul>
+
+                <h3>Computers:</h3>
+                <p><strong>Primary:</strong> ${currentFormData.primary_computer || ''}</p>
+                <p><strong>Secondary:</strong> ${currentFormData.secondary_computer || ''}</p>
+            
+                <h3>Courses:</h3>
+                <ul>
+                    <li>${currentFormData.course_one_number}: ${currentFormData.course_one} (${currentFormData.course_one_why})</li>
+                    <li>${currentFormData.course_two_number}: ${currentFormData.course_two} (${currentFormData.course_two_why})</li>
+                </ul>
+
+                <h3>Quote:</h3>
+                <p><em>"${currentFormData.quote || ''}"</em> - <strong>${currentFormData.quote_author || ''}</strong></p>
+
+                <nav style="text-align: center; margin-top: 20px;">
+                    ${currentFormData.link_one} | ${currentFormData.link_two} | ${currentFormData.link_three} | ${currentFormData.link_four} | ${currentFormData.link_five}
+                </nav>
+            </div>
+        `;
+    }
+};
+*/
