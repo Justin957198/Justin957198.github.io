@@ -162,6 +162,11 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!form) return alert("Form not found!");
 
             const formData = new FormData(form);
+            if (!form.checkValidity()) {
+                // This triggers the browser's built-in "Please fill out this field" bubbles
+                form.reportValidity(); 
+                return; // Stop the function here so no new tab opens
+            }
             const currentFormData = Object.fromEntries(formData.entries());
 
             const fileInput = document.querySelector('input[name="picture_upload"]');
@@ -194,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Create the HTML structure for the new tab
             const profileHTML = `
-                <div style="margin-left: 10%; margin-right: 10%; border: 1px solid #ccc; padding: 20px; background: white; font-family: Arial, sans-serif; color: #000000;">
+                <div style="margin-left: 10%; margin-right: 10%; border: 1px solid #ccc; padding-left: 20px; padding-right: 20px; padding-top: 10px; background: white; font-family: Arial, sans-serif; color: #000000;">
                 <p>I understand that what i put here is publicly available on the web and i won’t put anything here i dont want the public to see</p>
                 <p><strong></strong> ${currentFormData.ack_check ? 'Confirmed ✅' : 'Pending ⏳'} - ${currentFormData.nick_name || ''} - ${currentFormData.date || ''}</p>
                 <h1 style="text-align: center; margin-bottom: 10px;">
@@ -231,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             
                 <h3>Quote:</h3>
-                <p style="padding: 10px;">
+                <p style="style="text-alaign: center; padding: 10px;">
                     <em>"${currentFormData.quote || ''}"</em> <br>
                     <span style="text-alaign: center;">- <strong>${currentFormData.quote_author || ''}</strong></span>
                     <span style="clear: both; display: block;"></span>
