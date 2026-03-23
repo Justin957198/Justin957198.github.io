@@ -31,8 +31,22 @@ function clearForm() {
     form.reset(); // Resets to defaults
     
     // This manually clears every text field just in case
-    const inputs = form.querySelectorAll('input[type="text"], textarea');
-    inputs.forEach(input => input.value = '');
+    const inputs = form.querySelectorAll('input[type="text"], input[type="number"], input[type="email"], textarea');
+    inputs.forEach((input) => {
+        input.value = ""; 
+    });
+}
+
+function resetIntroductionForm() {
+    // Select the form by its ID or index
+    const introForm = document.getElementById('intro-form'); 
+    
+    if (introForm) {
+        introForm.reset();
+        console.log("Form has been reverted to default values.");
+    } else {
+        console.error("Form not found.");
+    }
 }
 
 const updateData = () => {
@@ -48,9 +62,9 @@ courseEntries.forEach((entry) => {
     if (entry.style.display !== "none" && !entry.classList.contains("hidden")) {
         
         // 3. Look for the inputs INSIDE this specific entry
-        const name = entry.querySelector('input[name^="course_"]')?.value || "";
-        const num = entry.querySelector('input[name^="course_num"]')?.value || "";
-        const why = entry.querySelector('input[name^="course_why"]')?.value || "";
+        const name = entry.querySelector('input[name^="course_"]').value || "";
+        const num = entry.querySelector('input[name^="course_num"]').value || "";
+        const why = entry.querySelector('input[name^="course_why"]').value || "";
 
         if (name || num) {
             coursesHTML += `<li><strong>${num}:</strong> ${name} <em>${why}</em></li>`;
@@ -132,6 +146,26 @@ document.addEventListener('DOMContentLoaded', () => {
         updateData();
     }
 });
+
+function submitForm(event) {
+    event.preventDefault(); // Prevents the form from actually submitting to a server
+
+    // Create an object to store the data
+    const formData = {
+        firstName: document.getElementById('first_name').value,
+        lastName: document.getElementById('last_name').value,
+        personalStatement: document.getElementById('personal_statement').value
+    };
+
+    // Save to local storage to "pass" it to the next page
+    localStorage.setItem('userIntroData', JSON.stringify(formData));
+
+    // Open the new page
+    window.location.href = "results.html";
+}
+
+// Attach to your submit button
+document.querySelector('form').addEventListener('submit', submitForm);
 /*
 const updateData = () => {
     const form = document.getElementById('introduction-input');
