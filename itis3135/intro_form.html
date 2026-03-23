@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/intro_form.css">
     <link rel="stylesheet" href="styles/default.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,138 +13,149 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <script src="scripts/introduction.js" defer></script>
-    <title>Document</title>
+    <script src="scripts/generate_json.js" defer></script>
+    <script src="scripts/generate_html.js" defer></script>
+    <title>Create Your Intro</title>
 </head>
-<body>
+<body id="intro-body">
     <div data-include="components/header.html" data-replace="%title%: Introduction Form"></div>
     <main class="form-page-splitter">
         <section class="form-side">
             <h3>Please fill out form below</h3>
             <form id="intro-form" action="results.html" method="GET" target="_blank">
-                <fieldset>
+                <fieldset id="personal">
                     <legend>Personal Information</legend>
                     <label for="first-name">First name:</label>
-                    <input required type="text" id="first-name" name="first_name" value="Justin" placeholder="">
+                    <input required type="text" id="first-name" name="first_name" value="Justin" placeholder=" ~john">
                     <label for="middle-name">Middle name:</label>
                     <input required type="text" id="middle-name" name="middle_name" value="L" placeholder="">
                     <br>
                     <label for="nick-name">Nickname:</label>
-                    <input required type="text" id="nick-name" name="nick_name" value="JLJ" placeholder="">
+                    <input required type="text" id="nick-name" name="nick_name" value="JLJ" placeholder="~JS">
                     <label for="last-name">Last name:</label>
-                    <input required type="text" id="last-name" name="last_name" value="Johnson" placeholder="">
+                    <input required type="text" id="last-name" name="last_name" value="Johnson" placeholder="~Smith">
                     <br>
                     <label id="ack-statement">I understand that what i put here is publicly available on the web and i won’t put anything here i dont want the public to see</label>
                     <br>
                     <input type="checkbox" id="ack-check" name="ack_check" required>
                     <input required type="date" id="get-date" name="date">
                 </fieldset>
-                <fieldset>
+                <fieldset id="personalization">
                     <legend>Personalization / Pictures</legend>
                     <label for="mascot-adjective">Mascot Adjective:</label>
-                    <input required type="text" id="mascot-adjective" name="mascot_adjective" value="Jumping" placeholder="">
+                    <input required type="text" id="mascot-adjective" name="mascot_adjective" value="Jumping" placeholder="~Swiming">
                     <label for="mascot-animal">Mascot Animal:</label>
-                    <input required type="text" id="mascot-animal" name="mascot_animal" value="Jackrabbit">
+                    <input required type="text" id="mascot-animal" name="mascot_animal" value="Jackrabbit" placeholder="~Salmond">
                     <br>
                     <label for="divider">Divider:</label>
                     <input required type="text" id="divider" placeholder="e.g. ~, |, etc" name="divider" value="|">
                     <label for="picture-upload">Drop picture here:</label>
-                    <input required type="file" id="picture-upload" name="picture_upload">
+                    <input type="file" id="picture-upload" name="picture_upload">
                     <br>
                     <label>Picture Caption:</label>
-                    <input required type="text" id="pic-cap" name="picture_caption" value="my first plane ride" placeholder="">
+                    <input required type="text" id="pic-cap" name="picture_caption" value="my first plane ride" placeholder="~describe picture">
                     <br>
                     <label for="personal-statement">Personal Statement:</label>
-                    <input required type="text" id="personal-statement" name="personal_statement" placeholder="" value="I am a junior attending here at UNCC. I'm a computer science major with a concentration in Web/App development. I’m excited to learn how to put a face on the backends and servers I'm in progress of making.">
+                    <br>
+                    <textarea required id="personal-statement" name="personal_statement" rows="5" cols="50" placeholder="~ bit about you" >I am a junior attending here at UNCC. I'm a computer science major with a concentration in Web/App development. I’m excited to learn how to put a face on the backends and servers I'm in progress of making.</textarea>
                 </fieldset>
-                <fieldset>
+                <fieldset id="background">
                     <legend>Personal Background</legend>
                     <label for="personal-background">Personal Background:</label>
-                    <input required type="text" id="personal-background" name="personal_background" placeholder="" value="I am 25 years old and have always had a fascination with computers, this led me to building two personal computers and diving into building software.">
+                    <br>
+                    <textarea required id="personal-background" name="personal_background" rows="5" cols="50" placeholder="~age or hobbies" >I am 25 years old and have always had a fascination with computers, this led me to building two personal computers and diving into building software.</textarea>
+                    <br>
                     <label for="professional-background">Professional Background:</label>
-                    <input required type="text" id="professional-background" name="professional_background" placeholder="" value="This is my 5th semester in the computer science major. I am currently employed at Amazon while I attend.">
+                    <br>
+                    <textarea required id="professional-background" name="professional_background" rows="5" cols="50" placeholder="~what you do / done" >This is my 5th semester in the computer science major. I am currently employed at Amazon while I attend.</textarea>
                     <br>
                     <label for="acedemic-background">Academic Background:</label>
-                    <input required type="text" id="acedemic-background" placeholder="" name="acedemic_background" value="I am currently a junior attending UNCC with a major in computer science with a concentration in Web/App development. I transferred here after getting my associates degree from CPCC.">
+                    <br>
+                    <textarea required id="acedemic-background" placeholder="~school / certs" name="acedemic_background" rows="5" cols="50" >I am currently a junior attending UNCC with a major in computer science with a concentration in Web/App development. I transferred here after getting my associates degree from CPCC.</textarea>
+                    <br>
                     <label for="subject-background">Background in Subject:</label>
-                    <input required type="text" id="subject-background" name="subject_background" placeholder="" value="While i dont have much experience in front end languages, I've spent the last year rapidly learning java with a bit of Python in my various classes. I’ve also been working on a few basic beginner projects on my github albeit most of them are private.">
+                    <br>
+                    <textarea required id="subject-background" name="subject_background" rows="5" cols="50" placeholder="~expirience in profession" >While i dont have much experience in front end languages, I've spent the last year rapidly learning java with a bit of Python in my various classes. I’ve also been working on a few basic beginner projects on my github albeit most of them are private.</textarea>
                     <br>
                     <label for="primary-computer">Primary Computer / Workstation:</label>
-                    <input required type="text" id="primary-computer" name="primary_computer" placeholder="" value="My primary work computer is my ASUS Vivobook laptop I bring with me to school and anywhere else I will be staying for a while.">
+                    <br>
+                    <textarea required id="primary-computer" name="primary_computer" rows="5" cols="50" placeholder="~pc you use" >My primary work computer is my ASUS Vivobook laptop I bring with me to school and anywhere else I will be staying for a while.</textarea>
                     <br>
                     <label for="secondary-computer">Secondary Computer / Workstation:</label>
-                    <input required type="text" id="secondary-computer" name="secondary_computer" placeholder="" value="My back up computer would be a custom built water cooled rig I have at home which has most of the same required programs needed for classwork">
+                    <br>
+                    <textarea required id="secondary-computer" name="secondary_computer" rows="5" cols="50" placeholder="~backup pc / location" >My back up computer would be a custom built water cooled rig I have at home which has most of the same required programs needed for classwork</textarea>
                 </fieldset>
                 <fieldset>
                     <legend>Courses being taken:</legend>
                     <div id="one" class="selection">
                         <label for="course">Course your taking:</label>
-                        <input required class="course-name" type="text" id="course" name="course_one" placeholder="" value="Database Design and Implementation">
+                        <input required class="course-name" type="text" id="course" name="course_one" placeholder="~class name" value="Database Design and Implementation">
                         <br>
                         <label for="course-num">Enter course number:</label>
-                        <input required class="course-number" type="number" id="course-num" name="course_num1" placeholder="" value="3160">
+                        <input required class="course-number" type="number" id="course-num" name="course_num1" placeholder="~class number" value="3160">
                         <br>
                         <label for="course-why">Why?:</label>
-                        <input required class="course-reason" type="text" id="course-why" name="course_why1" placeholder="" value="To solidify my knowledge on databases and utilize them better.">
+                        <input required class="course-reason" type="text" id="course-why" name="course_why1" placeholder="~reason for taking" value="To solidify my knowledge on databases and utilize them better.">
                     </div>
                     <div id="two" class="selection">
                         <label for="course2">Course your taking:</label>
-                        <input class="course-name" type="text" id="course2" name="course_two" placeholder="" value="Introduction to Human Centered Computing">
+                        <input class="course-name" type="text" id="course2" name="course_two" placeholder="~class name" value="Introduction to Human Centered Computing">
                         <br>
                         <label for="course-num2">Enter course number:</label>
-                        <input class="course-number" type="number" id="course-num2" name="course_num2" placeholder="" value="3130">
+                        <input class="course-number" type="number" id="course-num2" name="course_num2" placeholder="~class number" value="3130">
                         <br>
                         <label for="course-why2">Why?:</label>
-                        <input class="course-reason" type="text" id="course-why2" name="course_why2" placeholder="" value="To create programs that are usable by all and understand how users interact with them.">
+                        <input class="course-reason" type="text" id="course-why2" name="course_why2" placeholder="~reason for taking" value="To create programs that are usable by all and understand how users interact with them.">
                     </div>
                     <div id="three" class="selection">
                         <label for="course3">Course your taking:</label>
-                        <input class="course-name" type="text" id="course3" name="course_three" placeholder="" value="Intro to Probability and Statistics">
+                        <input class="course-name" type="text" id="course3" name="course_three" placeholder="~class name" value="Intro to Probability and Statistics">
                         <br>
                         <label for="course-num3">Enter course number:</label>
-                        <input class="course-number" type="number" id="course-num3" name="course_num3" placeholder="" value="2122">
+                        <input class="course-number" type="number" id="course-num3" name="course_num3" placeholder="~class number" value="2122">
                         <br>
                         <label for="course-why3">Why?:</label>
-                        <input class="course-reason" type="text" id="course-why3" name="course_why3" placeholder="" value="Required">
+                        <input class="course-reason" type="text" id="course-why3" name="course_why3" placeholder="~reason for taking" value="Required">
                     </div>
                     <div id="four" class="selection">
                         <label for="course4">Course your taking:</label>
-                        <input class="course-name" type="text" id="course4" name="course_four" placeholder="" value="Front End Web App Development">
+                        <input class="course-name" type="text" id="course4" name="course_four" placeholder="~class name" value="Front End Web App Development">
                         <br>
                         <label for="course-num4">Enter course number:</label>
-                        <input class="course-number" type="number" id="course-num4" name="course_num4" placeholder="" value="3135">
+                        <input class="course-number" type="number" id="course-num4" name="course_num4" placeholder="~class number" value="3135">
                         <br>
                         <label for="course-why4">Why?:</label>
-                        <input class="course-reason" type="text" id="course-why4" name="course_why4"  placeholder="" value="This class is for learning how to make professional / human friendly front ends.">
+                        <input class="course-reason" type="text" id="course-why4" name="course_why4"  placeholder="~reason for taking" value="This class is for learning how to make professional / human friendly front ends.">
                     </div>
                     <div id="five" class="selection" style="display: none;">
                         <label class="course-name" for="course5">Course your taking:</label>
-                        <input type="text" id="course5" name="course_five" >
+                        <input type="text" id="course5" name="course_five" placeholder="~class name">
                         <br>
                         <label for="course-num5">Enter course number:</label>
-                        <input class="course-number" type="number" id="course-num5" placeholder="" name="course_num5" >
+                        <input class="course-number" type="number" id="course-num5" placeholder="~class number" name="course_num5" >
                         <br>
                         <label for="course-why5">Why?:</label>
-                        <input class="course-reason" type="text" id="course-why5" placeholder="" name="course_why5" >
+                        <input class="course-reason" type="text" id="course-why5" placeholder="~reason for taking" name="course_why5" >
                     </div>
                     <div id="six" class="selection" style="display: none;">
                         <label class="course-name" for="course6">Course your taking:</label>
-                        <input type="text" id="course6" name="course_six" placeholder="">
+                        <input type="text" id="course6" name="course_six" placeholder="~class name">
                         <br>
                         <label for="course-num6">Enter course number:</label>
-                        <input class="course-number" type="number" id="course-num6" placeholder="" name="course_num6" >
+                        <input class="course-number" type="number" id="course-num6" placeholder="~class number" name="course_num6" >
                         <br>
                         <label for="course-why6">Why?:</label>
-                        <input class="course-reason" type="text" id="course-why6" placeholder="" name="course_why6" >
+                        <input class="course-reason" type="text" id="course-why6" placeholder="~reason for taking" name="course_why6" >
                     </div>
                     <div id="seven" class="selection" style="display: none;">
                         <label for="course7">Course your taking:</label>
-                        <input class="course-name" type="text" id="course7" placeholder="" name="course_seven" >
+                        <input class="course-name" type="text" id="course7" placeholder="~class name" name="course_seven" >
                         <br>
                         <label for="course-num7">Enter course number:</label>
-                        <input class="course-number" type="number" id="course-num7" placeholder="" name="course_num7" >
+                        <input class="course-number" type="number" id="course-num7" placeholder="~class number" name="course_num7" >
                         <br>
                         <label for="course-why7">Why?:</label>
-                        <input class="course-reason" type="text" id="course-why7" placeholder="" name="course_why7" >
+                        <input class="course-reason" type="text" id="course-why7" placeholder="~reason for taking" name="course_why7" >
                     </div>
                     <div>
                         <button id="add-course-btn" type="button">+</button>
@@ -154,30 +166,36 @@
                 <fieldset>
                     <legend>Quotes and opinions</legend>
                     <label for="Quote">Favorite Quote:</label>
-                    <input required type="text" id="Quote" name="quote" value="Dont let what you cannot do interfere with what you can do.">
+                    <br>
+                    <textarea required id="Quote" name="quote" rows="5" cols="50" placeholder="~quote">Dont let what you cannot do interfere with what you can do.</textarea>
                     <br>
                     <label for="quote-author">Quote Author:</label>
-                    <input required type="text" id="quote-author" name="quote_author" value="John Wooden">
+                    <input required type="text" id="quote-author" name="quote_author" value="John Wooden" placeholder="~author of above quote">
                     <br>
                     <label for="funny-messege">Funny Messege:</label>
-                    <input type="text" id="funny-messege" name="funny_messege" value="">
+                    <br>
+                    <textarea id="funny-messege" name="funny_messege" rows="5" cols="50" placeholder="~something funny"></textarea>
                     <br>
                     <label for="thoughts">Something to share:</label>
-                    <input type="text" id="thoughts" name="thoughts" value="I’ve successfully built and maintained two computers.">
                     <br>
-                    <label for="link">Five links:</label>
-                    <input required type="text" id="link" name="link_one" value="Github.io">
+                    <textarea id="thoughts" name="thoughts" rows="5" cols="50" placeholder="~anything extra">I’ve successfully built and maintained two computers.</textarea>
                     <br>
-                    <input required type="text" id="link2" name="link_two" value="Github">
+                    <label for="link">Five links, enter name in first box then url in second:</label>
                     <br>
-                    <input required type="text" id="link3" name="link_three" value="CLT Web">
+                    <input required type="text" id="link" name="link_one" value="Github.io"><input required type="text" id="link-dest" name="link_dest_url" value="https://justin957198.github.io/">
                     <br>
-                    <input required type="text" id="link4" name="link_four" value="FreeCodeCamp"> 
+                    <input required type="text" id="link2" name="link_two" value="Github"><input required type="text" id="link-dest2" name="link_dest_url2" value="https://github.com/Justin957198">
                     <br>
-                    <input required type="text" id="link5" name="link_five" value="Linkedln">
+                    <input required type="text" id="link3" name="link_three" value="CLT Web"><input required type="text" id="link-dest3" name="link_dest_url3" value="https://webpages.charlotte.edu/jjohn646/">
+                    <br>
+                    <input required type="text" id="link4" name="link_four" value="FreeCodeCamp"><input required type="text" id="link-dest4" name="link_dest_url4" value="https://www.freecodecamp.org/justin_johnson">
+                    <br>
+                    <input required type="text" id="link5" name="link_five" value="Linkedln"><input required type="text" id="link-dest5" name="link_dest_url5" value="https://www.linkedin.com/in/justin-johnson-95a443324/">
                 </fieldset>
                 <h4>Form Buttons</h4>
-                <button id="submit" type="submit">Submit Form</button>
+                <button id="submit" type="submit">Submit</button>
+                <button id="generate-json-btn" type="submit">Generate Json</button>
+                <button id="generate-html-btn">Generate HTML</button>
                 <button id="clear-btn" onclick="clearForm()">Clear Form</button>
                 <button id="reset-btn" onclick="resetIntroductionForm()">Reset Form</button>
             </form>

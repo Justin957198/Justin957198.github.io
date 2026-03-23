@@ -62,7 +62,7 @@ main {
 
 }
 
-h1 {
+h1, label {
     font-family: "cabin", sans-serif;
     text-align: center;
 }

@@ -84,22 +84,24 @@ courseEntries.forEach((entry) => {
 
     if (fileInput && fileInput.files[0]) {
         objectURL = URL.createObjectURL(fileInput.files[0]);
+    } else {
+        objectURL = "images/Justin_plane.jpg";
     }
 
     displayArea.innerHTML = `
         <div style="border: 1px solid #ccc; padding: 20px; background: white; font-family: Arial, sans-serif; color: #000000;">
             <p>I understand that what i put here is publicly available on the web and i won’t put anything here i dont want the public to see</p>
-            <p><strong>Agreement:</strong> ${currentFormData.ack_check ? 'Confirmed ✅' : 'Pending ⏳'} - ${currentFormData.nick_name || ''} - ${currentFormData.date || ''}</p>
+            <p><strong></strong> ${currentFormData.ack_check ? 'Confirmed ✅' : 'Pending ⏳'} - ${currentFormData.nick_name || ''} - ${currentFormData.date || ''}</p>
             <h1 style="text-align: center; margin-bottom: 10px;">
                 ${currentFormData.first_name || ''} ${currentFormData.middle_name || ''} ${currentFormData.last_name || ''} 
                 <span style="color: #000000;">${currentFormData.divider || '|'}</span> 
                 ${currentFormData.mascot_adjective || ''} ${currentFormData.mascot_animal || ''}
             </h1>
             <hr>
-            <div style="text-align:center; margin: 20px 0;">
+            <figure style="text-align:center; margin: 20px 0;">
                 <img src="${objectURL}" alt="User Photo" style="max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                <p><em>${currentFormData.picture_caption || ''}</em></p>
-            </div>
+                <figcaption><em>${currentFormData.picture_caption || ''}</em></figcaption>
+            </figure>
             
             <p>${currentFormData.personal_statement || ''}</p>
         
@@ -118,18 +120,20 @@ courseEntries.forEach((entry) => {
                 ${coursesHTML || "<li>No courses added yet.</li>"}
             </ul>
 
+            <p><strong>Funny Messege:</strong> ${currentFormData.funny_messege || ''}
+
             <p><strong>I'd also like to share:</strong> ${currentFormData.thoughts || ''}</p>
 
         
             <h3>Quote:</h3>
-            <p style="background: #f9f9f9; padding: 10px; border-left: 5px solid #ccc;">
+            <p style="padding: 10px;">
                 <em>"${currentFormData.quote || ''}"</em> <br>
                 <span style="float: right;">- <strong>${currentFormData.quote_author || ''}</strong></span>
                 <span style="clear: both; display: block;"></span>
             </p>
 
             <nav style="text-align: center; color: #1155cc;">
-                <strong>Links:</strong> ${currentFormData.link_one || ''} | ${currentFormData.link_two || ''} | ${currentFormData.link_three || ''} | ${currentFormData.link_four || ''} | ${currentFormData.link_five || ''}
+                <a href="${currentFormData.link_dest_url || ''}">${currentFormData.link_one || ''}</a> | <a href="${currentFormData.link_dest_url2 || ''}">${currentFormData.link_two || ''}</a> | <a href="${currentFormData.link_dest_url3 || ''}">${currentFormData.link_three || ''}</a> | <a href="${currentFormData.link_dest_url4 || ''}">${currentFormData.link_four || ''}</a> | <a href="${currentFormData.link_dest_url5 || ''}">${currentFormData.link_five || ''}</a>
             </nav>
         </div>
     `;
@@ -147,88 +151,102 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-function submitForm(event) {
-    event.preventDefault(); // Prevents the form from actually submitting to a server
+document.addEventListener("DOMContentLoaded", () => {
+    const submitBtn = document.querySelector('button[type="submit"]');
 
-    // Create an object to store the data
-    const formData = {
-        firstName: document.getElementById('first_name').value,
-        lastName: document.getElementById('last_name').value,
-        personalStatement: document.getElementById('personal_statement').value
-    };
+    if (submitBtn) {
+        submitBtn.addEventListener("click", (event) => {
+            event.preventDefault();
 
-    // Save to local storage to "pass" it to the next page
-    localStorage.setItem('userIntroData', JSON.stringify(formData));
+            const form = document.querySelector("form");
+            if (!form) return alert("Form not found!");
 
-    // Open the new page
-    window.location.href = "results.html";
-}
+            const formData = new FormData(form);
+            const currentFormData = Object.fromEntries(formData.entries());
 
-// Attach to your submit button
-document.querySelector('form').addEventListener('submit', submitForm);
-/*
-const updateData = () => {
-    const form = document.getElementById('introduction-input');
-    const displayArea = document.getElementById('live-preview');
-    const data = new FormData(form);
-    const currentFormData = {};
-    
-    // Convert FormData to a plain object
-    for (let [key, value] of data.entries()) {
-        currentFormData[key] = value;
-    }
+            const fileInput = document.querySelector('input[name="picture_upload"]');
+            let objectURL = "https://via.placeholder.com/300"; 
 
-    const fileInput = document.querySelector('input[name="picture_upload"]');
-    // Use a placeholder if no image is uploaded yet
-    let objectURL = "https://via.placeholder.com/300"; 
+            const courseEntries = document.querySelectorAll('.selection');
 
-    if (fileInput && fileInput.files[0]) {
-        objectURL = URL.createObjectURL(fileInput.files[0]);
-    }
+            let coursesHTML = "";
 
-    if (displayArea) {
-        displayArea.innerHTML = `
-            <div style="border: 1px solid #ccc; padding: 20px; background: white; font-family: Arial, sans-serif;">
-                <p>Agreement: ${currentFormData.ack_check ? 'Confirmed' : 'Pending'} - ${currentFormData.nick_name || ''} - ${currentFormData.date || ''}</p>
-                <h1 style="text-align: center;">
+        courseEntries.forEach((entry) => {
+            // 2. SPOT: Only proceed if the container is NOT hidden
+            if (entry.style.display !== "none" && !entry.classList.contains("hidden")) {
+                
+                // 3. Look for the inputs INSIDE this specific entry
+                const name = entry.querySelector('input[name^="course_"]').value || "";
+                const num = entry.querySelector('input[name^="course_num"]').value || "";
+                const why = entry.querySelector('input[name^="course_why"]').value || "";
+
+                if (name || num) {
+                    coursesHTML += `<li><strong>${num}:</strong> ${name} <em>${why}</em></li>`;
+                }
+            }
+        });
+
+            if (fileInput && fileInput.files[0]) {
+                objectURL = URL.createObjectURL(fileInput.files[0]);
+            } else {
+                objectURL = "images/Justin_plane.jpg";
+            }
+
+            // Create the HTML structure for the new tab
+            const profileHTML = `
+                <div style="margin-left: 10%; margin-right: 10%; border: 1px solid #ccc; padding: 20px; background: white; font-family: Arial, sans-serif; color: #000000;">
+                <p>I understand that what i put here is publicly available on the web and i won’t put anything here i dont want the public to see</p>
+                <p><strong></strong> ${currentFormData.ack_check ? 'Confirmed ✅' : 'Pending ⏳'} - ${currentFormData.nick_name || ''} - ${currentFormData.date || ''}</p>
+                <h1 style="text-align: center; margin-bottom: 10px;">
                     ${currentFormData.first_name || ''} ${currentFormData.middle_name || ''} ${currentFormData.last_name || ''} 
-                    ${currentFormData.divider || '|'} 
+                    <span style="color: #000000;">${currentFormData.divider || '|'}</span> 
                     ${currentFormData.mascot_adjective || ''} ${currentFormData.mascot_animal || ''}
                 </h1>
                 <hr>
-                <div style="text-align:center;">
-                    <img src="${objectURL}" alt="User Photo" style="max-width: 300px; height: auto; border-radius: 8px;">
-                    <p><em>${currentFormData.picture_caption || ''}</em></p>
-                </div>
+                <figure style="text-align:center; margin: 20px 0;">
+                    <img src="${objectURL}" alt="User Photo" style="max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <figcaption><em>${currentFormData.picture_caption || ''}</em></figcaption>
+                </figure>
                 
-                <h3>Personal Statement:</h3>
                 <p>${currentFormData.personal_statement || ''}</p>
             
-                <h3>Background:</h3>
                 <ul>
-                    <li><strong>Personal:</strong> ${currentFormData.personal_background || ''}</li>
-                    <li><strong>Academic:</strong> ${currentFormData.acedemic_background || ''}</li>
-                    <li><strong>Subject:</strong> ${currentFormData.subject_background || ''}</li>
+                    <li><strong>Personal Background:</strong>${currentFormData.personal_background || ''}</li>
+                    <li><strong>Professional Background:</strong> ${currentFormData.professional_background || ''}</li>
+                    <li><strong>Academic Background:</strong> ${currentFormData.acedemic_background || ''}</li>
+                    <li><strong>Backgound in Subject:</strong> ${currentFormData.subject_background || ''}</li>
                 </ul>
 
-                <h3>Computers:</h3>
-                <p><strong>Primary:</strong> ${currentFormData.primary_computer || ''}</p>
-                <p><strong>Secondary:</strong> ${currentFormData.secondary_computer || ''}</p>
+                <p><strong>Primary Work Computer:</strong> ${currentFormData.primary_computer || ''}</p>
+                <p><strong>Backup Work Computer & Location Plan:</strong> ${currentFormData.secondary_computer || ''}</p>
+
+                <h3>Courses I'm taking and why:</h3>
+                <ul>
+                    ${coursesHTML || "<li>No courses added yet.</li>"}
+                </ul>
+
+                <p><strong>Funny Messege:</strong> ${currentFormData.funny_messege || ''}
+
+                <p><strong>I'd also like to share:</strong> ${currentFormData.thoughts || ''}</p>
+
             
-                <h3>Courses:</h3>
-                <ul>
-                    <li>${currentFormData.course_one_number}: ${currentFormData.course_one} (${currentFormData.course_one_why})</li>
-                    <li>${currentFormData.course_two_number}: ${currentFormData.course_two} (${currentFormData.course_two_why})</li>
-                </ul>
-
                 <h3>Quote:</h3>
-                <p><em>"${currentFormData.quote || ''}"</em> - <strong>${currentFormData.quote_author || ''}</strong></p>
+                <p style="padding: 10px;">
+                    <em>"${currentFormData.quote || ''}"</em> <br>
+                    <span style="text-alaign: center;">- <strong>${currentFormData.quote_author || ''}</strong></span>
+                    <span style="clear: both; display: block;"></span>
+                </p>
 
-                <nav style="text-align: center; margin-top: 20px;">
-                    ${currentFormData.link_one} | ${currentFormData.link_two} | ${currentFormData.link_three} | ${currentFormData.link_four} | ${currentFormData.link_five}
+                <nav style="text-align: center; color: #1155cc;">
+                    <a href="${currentFormData.link_dest_url || ''}">${currentFormData.link_one || ''}</a> | <a href="${currentFormData.link_dest_url2 || ''}">${currentFormData.link_two || ''}</a> | <a href="${currentFormData.link_dest_url3 || ''}">${currentFormData.link_three || ''}</a> | <a href="${currentFormData.link_dest_url4 || ''}">${currentFormData.link_four || ''}</a> | <a href="${currentFormData.link_dest_url5 || ''}">${currentFormData.link_five || ''}</a>
                 </nav>
             </div>
-        `;
+            `;
+
+            const newTab = window.open();
+            newTab.document.write(profileHTML);
+            newTab.document.close();
+        });
     }
-};
-*/
+});
+
