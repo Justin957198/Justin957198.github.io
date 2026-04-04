@@ -44,7 +44,8 @@ main {
     padding-right: 10px;
     border-right: 5px;
     color: black;
-    
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .form-page-splitter {
