@@ -1,0 +1,36 @@
+#site_header {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+#page_title {
+    text-align: left;
+    font-weight: bold;
+}
+
+#page_nav {
+    text-align: right;
+    right: 0;
+    padding-top: 10px;
+}
+
+.main_split {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.left_pictures {
+
+}
+
+.slide_hidden {
+    display: none;
+}
+
+.site_image {
+    border: 5px solid black;
+}
+
+.right_articles {
+
+}
