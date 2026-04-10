@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="project_styles/default_p.css">
+    <script src="project_scripts/clickable_picture.js" defer></script>
+    <title>Raising Canines | First Trot</title>
+</head>
+<body>
+    <div data-include="project_componients/header.html" data-replace="%title%:Rasing Canines - First Trot"></div>
+    <hr>
+    <main class="main_split">
+        <section class="left_pictures">
+            <h2>Picture Timeline</h2>
+            <figure>
+                <img class="site_image" src="project_images/Dog_Collar.png" alt="" onclick="showArticleOne('before_adoption')" width="250" height="200">
+                <figcaption>Thinking of Adoption</figcaption>
+            </figure>
+            <figure>
+                <img class="site_image" src="project_images/Dog_Silhouette.png" alt="" onclick="showArticleOne('which_one')" width="250" height="200">
+                <figcaption>Bunches or Breeds</figcaption>
+            </figure>
+            <figure>
+                <img class="site_image" src="project_images/Crate.png" alt="" onclick="showArticleOne('on_the_road')" width="250" height="200">
+                <figcaption>A Create Ride</figcaption>
+            </figure>
+            <figure>
+                <img class="site_image" src="project_images/Dog_Bed.png" alt="" onclick="showArticleOne('getting_comfy')" width="250" height="200">
+                <figcaption>Settling In</figcaption>
+            </figure>
+        </section>
+        <section id="right_articles">
+            <h2>Articles</h2>
+            <section id="before_adoption" class="visible">
+                <h3>Thinking about getting a Dog?</h3>
+                <p>So you've finally put your paws on the trigger... you want a fury friend for you or your family.</p>
+            </section>
+            <section id="which_one" class="visible">
+                <h3>Which dog is right for you</h3>
+                <p>People come in all shapes and sizes, and so do dogs read more to find out which dog is right for you.</p>
+            </section>
+            <section id="on_the_road" class="visible">
+                <h3>The ride homne</h3>
+                <p>On the ride home you may have some thoughts, heres what you need to know.</p>
+            </section>
+            <section id="getting_comfy" class="visible">
+                <h3>Settling in</h3>
+                <p>You secured the package and made it home, for you its the start of a new relationship, for them its a whole new world.</p>
+            </section>
+        </section>
+    </main>
+    <div data-include="project_componients/footer.html"></div>
+    <script src="../itis3135/scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

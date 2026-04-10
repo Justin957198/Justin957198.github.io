@@ -19,6 +19,10 @@
     grid-template-columns: 40% 60%;
 }
 
+#about_section {
+    text-align: center;
+}
+
 .left_pictures {
 
 }
@@ -33,4 +37,17 @@
 
 .right_articles {
 
+}
+
+.visible {
+    display: none;
+}
+
+#class_site_footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#contact_block {
+    text-align: right;
 }
