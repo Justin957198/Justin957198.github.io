@@ -12,6 +12,7 @@
     text-align: right;
     right: 0;
     padding-top: 10px;
+    padding-right: 5px;
 }
 
 .main_split {
@@ -35,8 +36,16 @@
     border: 5px solid black;
 }
 
+figcaption {
+    
+}
+
 .right_articles {
 
+}
+
+.article_titles {
+    text-align: center;
 }
 
 .visible {

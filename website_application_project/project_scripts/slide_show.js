@@ -2,7 +2,7 @@
 const images = [
     'project_images/Dog_Under_Chair.JPG',
     'project_images/Dog_SideEye.JPG',
-    ''
+    'project_images/Chocolate_Lab.jpg'
 ];
 
 // 2. Set the starting position

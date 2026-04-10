@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="project_styles/default_p.css">
+    <script src="project_scripts/clickable_picture.js" defer></script>
+    <title>Raising Canines | The Dog House</title>
+</head>
+<body>
+    <div data-include="project_componients/header.html" data-replace="%title%:Rasing Canines - The dog house"></div>
+    <hr>
+    <main class="main_split">
+        <section class="left_pictures">
+            <h2>Clickable Pictures</h2>
+            <figure>
+                <img class="site_image" src="project_images/Dog_in_cave_bed.png" alt="" onclick="showArticleOne('sleeping')" width="250" height="200">
+                <figcaption>Sleeping habits</figcaption>
+            </figure>
+            <figure>
+                <img class="site_image" src="project_images/Doggy_Gate.png" alt="" onclick="showArticleOne('off_limits_section')" width="250" height="200">
+                <figcaption>Offlimit areas</figcaption>
+            </figure>
+        </section>
+        <section id="right_articles">
+            <h2>Articles</h2>
+            <section>
+                <h3 class="article_titles">Dog House Overview</h3>
+                <p>Welcome to the Dog house section, here we will talk about keeping dogs inside or ouside and how to limit their travel to odff limit rooms.</p>
+            </section>
+            <section id="sleeping" class="visible">
+                <h3 class="article_titles">Sleeping habits</h3>
+                <p>Your dog being hyperactive or extremely sluggish could be more than just iorregular sleeping patterns, here are some thing you might want to know.</p>
+            </section>
+            <section id="off_limits_section" class="visible">
+                <h3>Dog gates and off limit areas</h3>
+                <p>Dogs are curios, natral exploreres, lets make sure they dont discover something dangerous.</p>
+            </section>
+            <section id="outdoor_living" class="visible">
+                <h3>Dogs Otside vs Inside</h3>
+                <p>Dogs are curios, natral exploreres, lets make sure they dont discover something dangerous.</p>
+            </section>
+        </section>
+    </main>
+    <hr>
+    <div data-include="project_componients/footer.html"></div>
+    <script src="../itis3135/scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
