@@ -15,7 +15,8 @@ function previewPetEntry() {
             displayArea.innerHTML = `
                 <div style="padding: 20px;">
                     <h3>Owner ${name} | Pet ${petName}</h3>
-                    <img src="${e.target.result}" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    <hr>
+                    <img src="${e.target.result}" style="max-width: 40%; height: auto; border-radius: 8px;">
                     <p style="margin-top: 15px; font-style: italic;">"${comments}"</p>
                 </div>
             `;
@@ -30,4 +31,26 @@ function previewPetEntry() {
             </div>
         `;
     }
+}
+
+function submitPetData(event) {
+    // Prevent the form from refreshing the page immediately
+    event.preventDefault();
+
+    // 1. Capture the data from the input fields
+    // Note: Replace 'name-id', 'pet-id', and 'comment-id' with your actual HTML element IDs
+    const userData = {
+        userName: document.getElementById('name-id').value,
+        petName: document.getElementById('pet-id').value,
+        comments: document.getElementById('comment-id').value
+
+        // For files, you would usually store a URL or Base64 string, 
+        // but for now, we will focus on text data.
+    };
+
+    // 2. Save the data to localStorage as a JSON string
+    localStorage.setItem('recentPost', JSON.stringify(userData));
+
+    // 3. Redirect to the Paw Park page (id=5 in your navigation)
+    window.location.href = 'paw_park.html'; 
 }
