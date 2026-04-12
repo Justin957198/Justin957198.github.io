@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Carme&family=Patrick+Hand&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+}
 #site_header {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 50%;
+    background-color: #E7E393;
 }
 
 #page_title {
@@ -15,9 +21,39 @@
     padding-right: 5px;
 }
 
+h1, h2, h3 {
+    font-family: "Carme", sans-serif;
+}
+
 .main_split {
     display: grid;
     grid-template-columns: 40% 60%;
+    background-color: #F4C95D;
+}
+
+p {
+    font-family: "Patrick Hand", cursive;
+    font-size: large;
+}
+
+#sign_up_split {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: #F4C95D;
+}
+
+#output_area {
+    border: 2px solid black;
+}
+
+.dog_posts {
+    text-align: center;
+}
+
+#posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 #about_section {
@@ -55,6 +91,15 @@ figcaption {
 #class_site_footer {
     display: grid;
     grid-template-columns: 50% 50%;
+    background-color: #99621E;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    height: 100vh;
+}
+ 
+a {
+    font-family: "roboto", sans-serif;
 }
 
 #contact_block {

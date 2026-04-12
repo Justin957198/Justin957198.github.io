@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="project_styles/default_p.css">
+    <script src="project_scripts/sign_up_form.js" defer></script>
+    <title>Rasing Canines | Sign Up</title>
+</head>
+<body>
+    <div data-include="project_componients/header.html" data-replace="%title%:Rasing Canines - Sign Up"></div>
+    <hr>
+    <main id="sign_up_split">
+        <section id="form_input">
+            <h2>Enter information here</h2>
+            <p>Welcome to the sign up page, here you can upload pictures of your pets as well as qotes and facts you want to share.</p>
+            <form>
+                <fieldset>
+                    <legend>Picture And Quote</legend>
+                    <label for="first_last_name">Enter first and last name:</label><br>
+                    <input id="first_last_name" required type="text" name="first_last_name" placeholder="~John Smith"><br>
+                    <label for="pet_name">Enter your pets name:</label><br>
+                    <input id="pet_name" required type="text" name="pet_name" placeholder="~kojo"><br>
+                    <label for="picture_input">Upload pet pic here:</label><br>
+                    <input id="picture_input" type="file" name="picture_input"><br>
+                    <label for="long_input">Add any comments, stories, or facts here:</label><br>
+                    <textarea required id="long_input" rows="8" cols="50"></textarea>
+                </fieldset>
+                <button id="preview" type="button" onclick="previewPetEntry()">Preview</button>
+                <button id="reset" type="reset">R</button>
+                <button id="submit" type="submit">Submit</button>
+            </form>
+            <p>See what other's posted <a href="paw_park.html">here.</a></p>
+        </section>
+        <section id="output_area">
+            <div class="right_box">
+
+            </div>
+        </section>
+    </main>
+    <hr>
+    <div data-include="project_componients/footer.html"></div>
+    <script src="../itis3135/scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
