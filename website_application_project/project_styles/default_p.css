@@ -25,6 +25,7 @@
 
 h1, h2, h3 {
     font-family: "Carme", sans-serif;
+    color: #0F0F0F;
 }
 
 .main_split {
@@ -38,6 +39,7 @@ p, li {
     font-family: "Patrick Hand", cursive;
     font-size: large;
     padding-right: 10px;
+    color: #0F0F0F;
 }
 
 #sign_up_split {
