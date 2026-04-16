@@ -2,7 +2,16 @@
 const images = [
     'project_images/Dog_Under_Chair.JPG',
     'project_images/Dog_SideEye.JPG',
-    'project_images/Chocolate_Lab.jpg'
+    'project_images/Chocolate_Lab.jpg',
+    'project_images/Jack.png'
+];
+
+const names = [
+    "Koji",
+    "Koji",
+    "Sam",
+    "Jack"
+
 ];
 
 // 2. Set the starting position
@@ -10,6 +19,7 @@ let currentIndex = 0;
 
 // 3. Select the elements
 const displayImage = document.getElementById('slideshow-image');
+const imageCaption = document.getElementById('image_caption');
 const num = document.getElementsByClassName('slide_num');
 const nextBtn = document.getElementById('forward');
 const prevBtn = document.getElementById('back');
@@ -17,6 +27,7 @@ const prevBtn = document.getElementById('back');
 // 4. Function to update the image
 function updateImage() {
     displayImage.src = images[currentIndex];
+    imageCaption.value = names[currentIndex];
 }
 
 // 5. Add Event Listeners
