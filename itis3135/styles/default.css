@@ -76,6 +76,10 @@ p {
     text-indent: 40px;
 }
 
+li {
+    font-weight: lighter;
+}
+
 .selection {
     display: block;
 }
@@ -111,6 +115,11 @@ p {
 
 .data-row:last-child {
     border-bottom: none;
+}
+
+.suggestion {
+    color: #ff8800;
+    font-style: italic;
 }
 
 footer {
