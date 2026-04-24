@@ -15,7 +15,7 @@
         <h2>Paw park Posts</h2>
         <div id="template-post">
             <h3>Koji</h3>
-            <img src="project_images/Koji.jpg" alt="Dog post" width=400 height=350>
+            <img src="project_images/Koji.jpg" alt="Dog post" width=300 height=250>
             <p><strong>Owner:</strong> Tiffany Johnson</p>
             <p>My dog koji who i love very much.</p>
             <small>Posted on: 4/24/2026</small>
@@ -43,7 +43,7 @@
             container.innerHTML = posts.map((post) => `
                 <div style="border: 2px solid #3d2b1f; margin: 20px; padding: 15px; background: #9AADBF;">
                     <h3>${post.petName}</h3>
-                    <img src="${localStorage.getItem('petPicture')}" alt="pet image" width=400 height=350>
+                    <img src="${localStorage.getItem('petPicture')}" alt="pet image" width=300 height=250>
                     <p><strong>Owner:</strong> ${post.owner}</p>
                     <p>${post.message}</p>
                 <small>Posted on: ${new Date().toLocaleDateString()}</small>
