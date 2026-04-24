@@ -115,10 +115,6 @@ figcaption {
     text-align: center;
 }
 
-.visible {
-    display: none;
-}
-
 #class-site-footer {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -135,4 +131,17 @@ a, form {
 
 #contact-block {
     text-align: right;
+}
+
+.visible {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #F4C95D;
+    border-radius: 8px;
+}
+
+.visible.is-open {
+    /* Set this higher than you think your text will ever be */
+    max-height: 500px; 
 }
