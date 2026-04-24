@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Carme&family=Patrick+Hand&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carme&family=Gorditas:wght@400;700&family=Patrick+Hand&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
     margin: 0;
@@ -32,8 +33,9 @@ h1, h2, h3 {
 
 .main_split {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: auto auto;
     padding-top: 15px;
+    gap: 20px;
     background-color: #F4C95D;
 }
 
@@ -44,9 +46,11 @@ h1, h2, h3 {
 }
 
 p, li {
-    font-family: "Patrick Hand", cursive;
+    font-family: "Quantico", cursive;
+    font-weight: 700;
     font-size: large;
     padding-right: 10px;
+    padding-top: 10px;
     
 }
 
@@ -62,6 +66,13 @@ p, li {
 
 .dog_posts {
     text-align: center;
+}
+
+#template-post {
+    border: 2px solid #3d2b1f; 
+    margin: 20px; 
+    padding: 15px; 
+    background: #9AADBF;
 }
 
 #posts {
@@ -93,7 +104,7 @@ figcaption {
 }
 
 .right_articles {
-    
+    flex: 1;
 }
 
 .article_titles {

@@ -32,25 +32,52 @@ function previewPetEntry() {
         `;
     }
 }
+function submitToPawPark(data) {
+    // Get existing posts or start a new array
+    let posts = JSON.parse(localStorage.getItem('dogPosts')) || [];
+    posts.push(data);
 
-function submitPetData(event) {
-    // Prevent the form from refreshing the page immediately
-    event.preventDefault();
+    // Save back to localStorage
+    localStorage.setItem('dogPosts', JSON.stringify(posts));
 
-    // 1. Capture the data from the input fields
-    // Note: Replace 'name-id', 'pet-id', and 'comment-id' with your actual HTML element IDs
-    const userData = {
-        userName: document.getElementById('name-id').value,
-        petName: document.getElementById('pet-id').value,
-        comments: document.getElementById('comment-id').value
+    // Redirect to the paw_park page
+    window.location.href = 'paw_park.html';
+}
 
-        // For files, you would usually store a URL or Base64 string, 
-        // but for now, we will focus on text data.
+const fileInput = document.querySelector('input[type="file"]');
+
+fileInput.addEventListener('change', function() {
+    const file = this.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        try {
+            // Save the result (the long base64 string)
+            localStorage.setItem('petPicture', e.target.result);
+            console.log("Image saved successfully!");
+        } catch (error) {
+            console.error("Error: Image is too large for localStorage!");
+            alert("This photo is too big. Please try a smaller one under 3MB.");
+        }
     };
 
-    // 2. Save the data to localStorage as a JSON string
-    localStorage.setItem('recentPost', JSON.stringify(userData));
+    reader.readAsDataURL(file);
+});
 
-    // 3. Redirect to the Paw Park page (id=5 in your navigation)
-    window.location.href = 'paw_park.html'; 
-}
+const nameInput = document.querySelector('input[name="first_last_name"]');
+const petInput = document.querySelector('input[name="pet_name"]');
+const commentInput = document.querySelector('textarea');
+const submitBtn = document.querySelector('button[type="submit"]');
+
+submitBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // Stop the page from reloading
+    
+    const postData = {
+        owner: nameInput.value,
+        petName: petInput.value,
+        message: commentInput.value,
+        date: new Date().toLocaleDateString()
+    };
+    
+    submitToPawPark(postData);
+});

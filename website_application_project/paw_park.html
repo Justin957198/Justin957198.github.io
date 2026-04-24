@@ -13,9 +13,43 @@
     <hr>
     <main id="posts">
         <h2>Paw park Posts</h2>
+        <div id="template-post">
+            <h3>Koji</h3>
+            <img src="project_images/Koji.jpg" alt="Dog post" width=400 height=350>
+            <p><strong>Owner:</strong> Tiffany Johnson</p>
+            <p>My dog koji who i love very much.</p>
+            <small>Posted on: 4/24/2026</small>
+        </div>
+        <div id="post-display-container">
+
+        </div>
     </main>
     <hr>
     <div data-include="project_componients/footer.html"></div>
     <script src="../itis3135/scripts/HTMLInclude.min.js"></script>
+    <script>
+        const container = document.getElementById('post-display-container');
+    
+        // 1. Grab data from storage
+        const rawData = localStorage.getItem('dogPosts');
+        const posts = JSON.parse(rawData) || [];
+
+        console.log("Found posts:", posts); // Check your F12 console for this!
+
+        if (posts.length === 0) {
+            container.innerHTML = "<p style='text-align:center;'>No posts yet. Go to the Sign Up page to add one!</p>";
+        } else {
+            // 2. Loop through and create HTML for each dog
+            container.innerHTML = posts.map((post) => `
+                <div style="border: 2px solid #3d2b1f; margin: 20px; padding: 15px; background: #9AADBF;">
+                    <h3>${post.petName}</h3>
+                    <img src="${localStorage.getItem('petPicture')}" alt="pet image" width=400 height=350>
+                    <p><strong>Owner:</strong> ${post.owner}</p>
+                    <p>${post.message}</p>
+                <small>Posted on: ${new Date().toLocaleDateString()}</small>
+                </div>
+            `).join('');
+        }
+    </script>
 </body>
 </html>
