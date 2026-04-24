@@ -5,7 +5,7 @@
     margin: 0;
     color: #0F0F0F;
 }
-#site_header {
+#site-header {
     display: grid;
     box-sizing: border-box;
     grid-template-columns: 50% 50%;
@@ -14,12 +14,12 @@
     padding-top: 15px;
 }
 
-#page_title {
+#page-title {
     text-align: left;
     font-weight: bold;
 }
 
-#page_nav {
+#page-nav {
     text-align: right;
     right: 0;
     padding-top: 10px;
@@ -115,7 +115,7 @@ figcaption {
     display: none;
 }
 
-#class_site_footer {
+#class-site-footer {
     display: grid;
     grid-template-columns: 50% 50%;
     background-color: #99621E;
@@ -129,6 +129,6 @@ a, form {
     font-family: "roboto", sans-serif;
 }
 
-#contact_block {
+#contact-block {
     text-align: right;
 }
